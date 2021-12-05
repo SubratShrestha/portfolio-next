@@ -1,0 +1,36 @@
+{
+  "name": "portfolio-next",
+  "version": "1.0.0",
+  "description": "Portfolio in next js showcasing some of my projects and work",
+  "scripts": {
+      "dev": "next dev -H 0.0.0.0",
+      "build": "next build",
+      "prettier": "prettier -write .",
+      "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SubratShrestha/portfolio-next.git"
+  },
+  "keywords": [],
+  "author": "Subrat Shrestha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SubratShrestha/portfolio-next/issues"
+  },
+  "homepage": "https://github.com/SubratShrestha/portfolio-next#readme",
+  "dependencies": {
+    "@chakra-ui/react": "^1.7.2",
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "framer-motion": "^5.3.3",
+    "next": "^12.0.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.0",
+    "eslint-config-next": "^12.0.6",
+    "prettier": "^2.5.1"
+  }
+}
