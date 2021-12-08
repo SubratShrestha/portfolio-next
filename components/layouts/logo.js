@@ -11,14 +11,9 @@ const LogoBox = styled.span`
   height: 32px;
   line-height: 20px;
   padding: 10px;
-
-  &:hover img {
-    transform: rotate(20deg);
-  }
 `;
 
 const Logo = () => {
-  // const s_logo = `../../public/images/contents/s-logo${useColorModeValue('', '-dark')}.png`;
   const s_logo = `/images/contents/s-logo${useColorModeValue('', '-dark')}.png`;
 
   return (
