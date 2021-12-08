@@ -12,9 +12,23 @@ import {
   MenuList,
   MenuButton,
   IconButton,
+  useColorMode,
   useColorModeValue
 } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+
+const ThemeToggleButton = () => {
+  const { toggleColorMode } = useColorMode();
+
+  return (
+    <IconButton
+      aria-label="Toggle theme"
+      colorScheme={useColorModeValue('purple', 'orange')}
+      icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+      onClick={toggleColorMode}
+    />
+  );
+};
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href;
@@ -34,8 +48,8 @@ const LinkItem = ({ href, path, children }) => {
 };
 
 const Navbar = props => {
+  const { toggleColorMode } = useColorMode();
   const { path } = props;
-
   return (
     <Box
       position="fixed"
@@ -75,6 +89,7 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
         <Box flex={1} align="right">
+          <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
               <MenuButton
@@ -106,4 +121,3 @@ const Navbar = props => {
 };
 
 export default Navbar;
-
