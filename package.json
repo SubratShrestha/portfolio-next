@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Portfolio in next js showcasing some of my projects and work",
   "scripts": {
-      "dev": "next dev -H 0.0.0.0",
-      "build": "next build",
-      "prettier": "prettier -write .",
-      "lint": "next lint"
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier --write .",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
