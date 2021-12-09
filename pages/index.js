@@ -22,7 +22,7 @@ const Page = () => {
         mt={6} // maybe
         align="center"
       >
-        An aspiring software engineer in Sydney.
+        Aspiring software engineer based in Sydney.
       </Box>
 
       <AnimatedSection delay={0.1}>

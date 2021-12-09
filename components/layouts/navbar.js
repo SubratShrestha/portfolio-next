@@ -15,20 +15,8 @@ import {
   useColorMode,
   useColorModeValue
 } from '@chakra-ui/react';
-import { HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
-
-const ThemeToggleButton = () => {
-  const { toggleColorMode } = useColorMode();
-
-  return (
-    <IconButton
-      aria-label="Toggle theme"
-      colorScheme={useColorModeValue('purple', 'orange')}
-      icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
-      onClick={toggleColorMode}
-    />
-  );
-};
+import { HamburgerIcon } from '@chakra-ui/icons';
+import ThemeToggleButton from './themeChangeButton';
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href;
@@ -48,7 +36,6 @@ const LinkItem = ({ href, path, children }) => {
 };
 
 const Navbar = props => {
-  const { toggleColorMode } = useColorMode();
   const { path } = props;
   return (
     <Box
