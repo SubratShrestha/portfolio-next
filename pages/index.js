@@ -1,5 +1,6 @@
 import { Container, Box, Heading, useColorModeValue } from '@chakra-ui/react';
 import AnimatedSection from '../components/layouts/animatedSection';
+import Paragraph from '../components/layouts/paragraph';
 
 const Page = () => {
   return (
@@ -9,7 +10,7 @@ const Page = () => {
           <Heading as="h2" variant="page-title">
             Subrat Shrestha
           </Heading>
-          {/* <p>Subheading</p> */}
+          <p>Student at UNSW.</p>
         </Box>
       </Box>
 
@@ -21,14 +22,14 @@ const Page = () => {
         mt={6} // maybe
         align="center"
       >
-        Hey, I'm an aspiring software engineer in Sydney.
+        An aspiring software engineer in Sydney.
       </Box>
 
       <AnimatedSection delay={0.1}>
         <Heading as="h3" variant="section-title">
           Work
         </Heading>
-        <p>some work stuff.</p>
+        <Paragraph>some work stuff.</Paragraph>
       </AnimatedSection>
     </Container>
   );
