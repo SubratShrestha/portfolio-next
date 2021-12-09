@@ -1,6 +1,14 @@
-import { Container, Box, Heading, useColorModeValue } from '@chakra-ui/react';
+import {
+  Container,
+  Box,
+  Heading,
+  useColorModeValue,
+  Button
+} from '@chakra-ui/react';
+import Link from 'next/link';
 import AnimatedSection from '../components/layouts/animatedSection';
 import Paragraph from '../components/layouts/paragraph';
+import { ChevronRightIcon } from '@chakra-ui/icons';
 
 const Page = () => {
   return (
@@ -23,6 +31,16 @@ const Page = () => {
         align="center"
       >
         Aspiring software engineer based in Sydney.
+      </Box>
+
+      <Box align="center" my={4}>
+        <Link href="/resume.pdf">
+          <a target="_blank">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              View Resume
+            </Button>
+          </a>
+        </Link>
       </Box>
 
       <AnimatedSection delay={0.1}>
