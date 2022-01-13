@@ -15,13 +15,6 @@ const Main = ({ children, router }) => {
         ${color2} 40%,
         ${color2} 100%
     )`
-  const doubleBgSm = `linear-gradient(
-        to right,
-        ${color1} 0%,
-        ${color1} 50%,
-        ${color2} 50%,
-        ${color2} 100%
-    )`
 
   return (
     <Box as='main' background={{ base: color1, md: doubleBg }} height='100vh'>
