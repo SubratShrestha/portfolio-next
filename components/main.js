@@ -24,7 +24,7 @@ const Main = ({ children, router }) => {
     )`
 
   return (
-    <Box as='main' background={{ base: doubleBgSm, md: doubleBg }} height='100vh'>
+    <Box as='main' background={{ base: color1, md: doubleBg }} height='100vh'>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Subrat Shrestha</title>
