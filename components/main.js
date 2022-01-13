@@ -5,7 +5,6 @@ import { Box, Flex, Container, useColorModeValue } from '@chakra-ui/react'
 
 const Main = ({ children, router }) => {
   // light, dark
-  // old dark = #202023
   const color1 = useColorModeValue('#D3DEDC', '#202125')
   const color2 = useColorModeValue('#E9ECE6', '#27282C')
   const doubleBg = `linear-gradient(
