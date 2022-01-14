@@ -1,8 +1,11 @@
 import { extendTheme } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
+import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools';
+import { Dict } from '@chakra-ui/utils';
+
+type Prop = Dict<any> | StyleFunctionProps;
 
 const styles = {
-  global: props => ({
+  global: (props: Prop) => ({
     body: {
       bg: mode('#f0e7db', '#202023')(props)
     }
@@ -24,7 +27,7 @@ const components = {
     }
   },
   Link: {
-    baseStyle: props => ({
+    baseStyle: (props: Prop) => ({
       color: mode('#3d7aed', '#ff63c3')(props),
       textUnderlineOffset: 3
     })
@@ -53,4 +56,3 @@ const theme = extendTheme({
 });
 
 export default theme;
-

@@ -1,6 +1,11 @@
 import { Container } from '@chakra-ui/react'
+import { ReactNode } from 'react'
 
-const CenteredContainer = ({ children, ...props }) => {
+interface CenteredContainerProps {
+    children: ReactNode
+}
+
+const CenteredContainer = ({ children, ...props }: CenteredContainerProps) => {
   return (
     <Container
       display='flex'

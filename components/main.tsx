@@ -2,8 +2,14 @@ import Head from 'next/head'
 import Navbar from './layouts/navbar'
 import CenteredContainer from './layouts/centeredContainer'
 import { Box, Flex, Container, useColorModeValue } from '@chakra-ui/react'
+import { Router } from 'next/router'
 
-const Main = ({ children, router }) => {
+interface Props {
+    children: React.ReactNode,
+    router: Router
+}
+
+const Main = ({ children, router }: Props) => {
   // light, dark
   const color1 = useColorModeValue('#D3DEDC', '#202125')
   const color2 = useColorModeValue('#E9ECE6', '#27282C')

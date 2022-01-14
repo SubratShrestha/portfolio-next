@@ -1,4 +1,4 @@
-import { Global } from '@emotion/react';
+import { Global } from '@emotion/react'
 
 const FontProvider = () => {
   return (
@@ -7,7 +7,7 @@ const FontProvider = () => {
             @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1C:wght@300;700&display=swap");
         `}
     />
-  );
-};
+  )
+}
 
-export default FontProvider;
+export default FontProvider

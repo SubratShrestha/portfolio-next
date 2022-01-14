@@ -1,18 +1,19 @@
+import type { NextPage } from 'next'
 import {
   Container,
   Box,
   Heading,
   Text,
-  useColorModeValue,
+  // useColorModeValue,
   Button,
   VStack
 } from '@chakra-ui/react'
 import Link from 'next/link'
-import AnimatedSection from '../components/layouts/animatedSection'
-import Paragraph from '../components/layouts/paragraph'
+// import AnimatedSection from '../components/layouts/animatedSection'
+// import Paragraph from '../components/layouts/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
-const Page = () => {
+const Page: NextPage = () => {
   return (
     <Container maxW='container.lg' margin={0}>
       <Container
@@ -69,4 +70,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default Page;

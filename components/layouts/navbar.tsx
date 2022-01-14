@@ -1,5 +1,5 @@
-import Logo from './logo';
-import NextLink from 'next/link';
+import Logo from './logo'
+import NextLink from 'next/link'
 import {
   Container,
   Box,
@@ -13,14 +13,24 @@ import {
   MenuButton,
   IconButton,
   useColorMode,
-  useColorModeValue
-} from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
-import ThemeToggleButton from './themeChangeButton';
+  useColorModeValue,
+} from '@chakra-ui/react'
+import { HamburgerIcon } from '@chakra-ui/icons'
+import ThemeToggleButton from './themeChangeButton'
 
-const LinkItem = ({ href, path, children }) => {
-  const active = path === href;
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha');
+interface LinkItemProps {
+  href: string
+  path: string
+  children: React.ReactNode
+}
+
+interface NavbarProps {
+  path: string
+}
+
+const LinkItem = ({ href, path, children }: LinkItemProps) => {
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha')
 
   return (
     <NextLink href={href}>
@@ -32,30 +42,30 @@ const LinkItem = ({ href, path, children }) => {
         {children}
       </Link>
     </NextLink>
-  );
-};
+  )
+}
 
-const Navbar = props => {
-  const { path } = props;
+const Navbar = ({ path, ...props }: NavbarProps) => {
+    console.log("typescript wee!")
   return (
     <Box
-      position="fixed"
-      as="nav"
-      w="100%"
+      position='fixed'
+      as='nav'
+      w='100%'
       bg={useColorModeValue('#ffffff40', '#20202380')}
       zIndex={1}
       {...props}
     >
       <Container
-        display="flex"
+        display='flex'
         p={2}
-        maxW="container.lg"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
+        maxW='container.lg'
+        wrap='wrap'
+        align='center'
+        justify='space-between'
       >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+        <Flex align='center' mr={5}>
+          <Heading as='h1' size='lg' letterSpacing={'tighter'}>
             <Logo />
           </Heading>
         </Flex>
@@ -63,36 +73,36 @@ const Navbar = props => {
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
-          alignItems="center"
+          alignItems='center'
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}
         >
-          <LinkItem href="/work" path={path}>
+          <LinkItem href='/work' path={path}>
             Work
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
+          <LinkItem href='/posts' path={path}>
             Posts
           </LinkItem>
         </Stack>
-        <Box flex={1} align="right">
+        <Box flex={1} align='right'>
           <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
+                variant='outline'
+                aria-label='Options'
               />
               <MenuList>
-                <NextLink href="/about" passHref>
+                <NextLink href='/about' passHref>
                   <MenuItem as={Link}>About</MenuItem>
                 </NextLink>
-                <NextLink href="/work" passHref>
+                <NextLink href='/work' passHref>
                   <MenuItem as={Link}>Work</MenuItem>
                 </NextLink>
                 <NextLink
-                  href="https://github.com/SubratShrestha/portfolio-next"
+                  href='https://github.com/SubratShrestha/portfolio-next'
                   passHref
                 >
                   <MenuItem as={Link}>Page source</MenuItem>
@@ -103,7 +113,7 @@ const Navbar = props => {
         </Box>
       </Container>
     </Box>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
