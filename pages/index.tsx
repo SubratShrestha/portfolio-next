@@ -12,12 +12,13 @@ import Link from 'next/link'
 // import AnimatedSection from '../components/layouts/animatedSection'
 // import Paragraph from '../components/layouts/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import WorkList from '../components/layouts/workList'
 
 const Page: NextPage = () => {
   return (
     <Container maxW='container.lg' margin={0}>
       <Container
-        display={{ base: 'flex' }}
+        display={{base: "block", md: "flex"}}
         margin={0}
         maxW='100%'
         justifyContent={{ base: 'space-between' }}
@@ -30,24 +31,15 @@ const Page: NextPage = () => {
               Shrestha
             </Heading>
 
-            <Text fontSize='2xl'>
+            <Text fontSize='2xl' textColor="#999">
               Aspiring Software Engineer
               <br />& Student at UNSW.
             </Text>
           </Box>
         </Box>
 
-        <Box>
-        <Heading as="h2" size="md">
-            Work:
-        </Heading>
-        <VStack spacing={8}>
-          <Box>project #1</Box>
-          <Box>project #2</Box>
-          <Box>project #3</Box>
-          <Box>project #4</Box>
-        </VStack>
-        </Box>
+        <WorkList />
+
       </Container>
 
       <Box align='center' my={4}>

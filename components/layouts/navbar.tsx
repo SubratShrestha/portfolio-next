@@ -46,7 +46,6 @@ const LinkItem = ({ href, path, children }: LinkItemProps) => {
 }
 
 const Navbar = ({ path, ...props }: NavbarProps) => {
-    console.log("typescript wee!")
   return (
     <Box
       position='fixed'
