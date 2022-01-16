@@ -5,8 +5,8 @@ import { Box, Flex, Container, useColorModeValue } from '@chakra-ui/react'
 import { Router } from 'next/router'
 
 interface Props {
-    children: React.ReactNode,
-    router: Router
+  children: React.ReactNode
+  router: Router
 }
 
 const Main = ({ children, router }: Props) => {
@@ -22,7 +22,7 @@ const Main = ({ children, router }: Props) => {
     )`
 
   return (
-    <Box as='main' background={{ base: color1, md: doubleBg }} height='100vh'>
+    <Box as='main' background={{ base: color1, md: doubleBg }} height='100%'>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Subrat Shrestha</title>

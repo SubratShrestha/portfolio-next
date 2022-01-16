@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import { Box, Flex, Heading, VStack, Text } from '@chakra-ui/react'
+import { Flex, Heading, VStack, Text } from '@chakra-ui/react'
 import works from '../../libs/work'
-import { motion, transform } from 'framer-motion'
-import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 interface workElement {
   title: string
@@ -10,7 +9,6 @@ interface workElement {
 }
 
 const WorkList: React.FC = () => {
-  const [selected, setSelected] = useState(-1)
   const childAlign = {
     base: 'flex-start',
     md: 'flex-end'
@@ -36,7 +34,11 @@ const WorkList: React.FC = () => {
   }
 
   return (
-    <Flex alignItems={childAlign} flexDirection='column' width={{base: "100%", md: "30%"}}>
+    <Flex
+      alignItems={childAlign}
+      flexDirection='column'
+      width={{ base: '100%', md: '30%' }}
+    >
       <Heading as='h2' size='sm' textColor='#999' marginY='5'>
         WORK
       </Heading>
@@ -57,7 +59,7 @@ const WorkList: React.FC = () => {
                 top={0}
                 zIndex={2}
                 width='100%'
-                textAlign={{base: "left", md: "right"}}
+                textAlign={{ base: 'left', md: 'right' }}
               >
                 {value.title}
               </Text>

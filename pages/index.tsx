@@ -5,24 +5,30 @@ import {
   Heading,
   Text,
   // useColorModeValue,
-  Button,
-  VStack
+  Button
 } from '@chakra-ui/react'
 import Link from 'next/link'
-// import AnimatedSection from '../components/layouts/animatedSection'
-// import Paragraph from '../components/layouts/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import WorkList from '../components/layouts/workList'
 
 const Page: NextPage = () => {
   return (
-    <Container maxW='container.lg' margin={0} display="flex" flexDirection="column" alignItems="center" height="100%" justifyContent="center">
+    <Container
+      maxW='container.lg'
+      margin={0}
+      display='flex'
+      flexDirection='column'
+      alignItems='center'
+      height='100%'
+      justifyContent='center'
+    >
       <Container
-        display={{base: "block", md: "flex"}}
+        display={{ base: 'block', md: 'flex' }}
         margin={0}
         maxW='100%'
-        height={{base: "75%", md: "45%"}}
+        height={{ base: '75%', md: '45%' }}
         justifyContent={{ base: 'space-between' }}
+        marginTop='5%'
       >
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
@@ -32,7 +38,7 @@ const Page: NextPage = () => {
               Shrestha
             </Heading>
 
-            <Text fontSize='2xl' textColor="#999">
+            <Text fontSize='2xl' textColor='#999'>
               Aspiring Software Engineer
               <br />& Student at UNSW.
             </Text>
@@ -61,4 +67,4 @@ const Page: NextPage = () => {
   )
 }
 
-export default Page;
+export default Page
