@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Flex, Heading, VStack, Text } from '@chakra-ui/react'
+import { Flex, Heading, VStack, Text, useColorModeValue } from '@chakra-ui/react'
 import works from '../../libs/work'
 import { motion } from 'framer-motion'
 
@@ -13,20 +13,20 @@ const WorkList: React.FC = () => {
     base: 'flex-start',
     md: 'flex-end'
   }
+  // light : #4FBDBA
   const underlineMotion = {
     rest: {
       opacity: 0,
       width: 0,
       ease: 'easeOut',
       duration: 0.2,
-      backgroundColor: 'transparent'
+      backgroundColor: useColorModeValue('#4FBDBA', '#35858B')
     },
     hover: {
-      backgroundColor: '#4FD1C5',
       width: '100%',
       opacity: 1,
       transition: {
-        duration: 0.3,
+        duration: 0.2,
         ease: 'easeIn'
       },
       cursor: 'pointer'
@@ -65,7 +65,7 @@ const WorkList: React.FC = () => {
               </Text>
               <motion.div
                 style={{
-                  height: '10px',
+                  height: '15px',
                   position: 'absolute',
                   top: 25,
                   right: 0
