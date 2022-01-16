@@ -18,38 +18,59 @@ const WorkList: React.FC = () => {
   const underlineMotion = {
     rest: {
       opacity: 0,
+      width: 0,
       ease: 'easeOut',
       duration: 0.2,
       backgroundColor: 'transparent'
     },
     hover: {
       backgroundColor: '#4FD1C5',
-      opacity: 0.75,
+      width: '100%',
+      opacity: 1,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
         ease: 'easeIn'
       },
-            cursor: "pointer"
+      cursor: 'pointer'
     }
   }
 
   return (
-    <Flex alignItems={childAlign} flexDirection='column'>
+    <Flex alignItems={childAlign} flexDirection='column' width={{base: "100%", md: "30%"}}>
       <Heading as='h2' size='sm' textColor='#999' marginY='5'>
         WORK
       </Heading>
-      <VStack spacing={8} align={childAlign}>
+      <VStack spacing={20} align={childAlign} width='100%'>
         {works.map((value: workElement, i: number) => (
           <Link href={`/${value.link}`} key={i}>
-            <motion.a style={{cursor: "pointer"}} initial='rest' whileHover='hover' animate='rest'>
-              <motion.div
-                style={{ width: '100%', height: '10x', translateY: '-20px'}}
-                variants={underlineMotion}
-              />
-              <Text as='h2' fontSize='3xl' fontWeight='bold'>
+            <motion.div
+              style={{ cursor: 'pointer', position: 'relative', width: '100%' }}
+              initial='rest'
+              whileHover='hover'
+              animate='rest'
+            >
+              <Text
+                as='h2'
+                fontSize='3xl'
+                fontWeight='bold'
+                position='absolute'
+                top={0}
+                zIndex={2}
+                width='100%'
+                textAlign={{base: "left", md: "right"}}
+              >
                 {value.title}
               </Text>
-            </motion.a>
+              <motion.div
+                style={{
+                  height: '10px',
+                  position: 'absolute',
+                  top: 25,
+                  right: 0
+                }}
+                variants={underlineMotion}
+              />
+            </motion.div>
           </Link>
         ))}
       </VStack>

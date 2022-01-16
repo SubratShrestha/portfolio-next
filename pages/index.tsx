@@ -16,11 +16,12 @@ import WorkList from '../components/layouts/workList'
 
 const Page: NextPage = () => {
   return (
-    <Container maxW='container.lg' margin={0}>
+    <Container maxW='container.lg' margin={0} display="flex" flexDirection="column" alignItems="center" height="100%" justifyContent="center">
       <Container
         display={{base: "block", md: "flex"}}
         margin={0}
         maxW='100%'
+        height={{base: "75%", md: "45%"}}
         justifyContent={{ base: 'space-between' }}
       >
         <Box display={{ md: 'flex' }}>
@@ -37,9 +38,7 @@ const Page: NextPage = () => {
             </Text>
           </Box>
         </Box>
-
         <WorkList />
-
       </Container>
 
       <Box align='center' my={4}>
