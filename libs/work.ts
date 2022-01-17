@@ -6,7 +6,8 @@ interface workType {
   end?: string
   intro?: string
   resp: Array<string>
-  tags?: Array<{ value: string; color: string }>
+  tags?: Array<{ value: string; color: string, textColor: string }>,
+  numImages?: number
 }
 const works: { [id: string]: workType } = {
   earnr: {
@@ -15,6 +16,7 @@ const works: { [id: string]: workType } = {
     link: 'earnr',
     start: 'February 2021',
     end: 'August 2021',
+    numImages: 3,
     resp: [
       'Reconstructed signup/onboarding application for new investors using Formik to allow for easier addition and modification of onboarding questions',
       'Developed Bonus code functionality to the platform using AWS Appsync and new GraphQL queries',
@@ -23,12 +25,12 @@ const works: { [id: string]: workType } = {
       'Converted the React landing page into a Webflow project for easier modification'
     ],
     tags: [
-      { value: 'React', color: '#61DAFB' },
-      { value: 'TypeScript', color: '#2D79C7' },
-      { value: 'NextJS', color: '#111111' },
-      { value: 'GraphQL', color: '#E00097' },
-      { value: 'AWS', color: '#FE9900' },
-      { value: 'TailwindCSS', color: '#38BDF8' }
+      { value: 'React', color: '#61DAFB', textColor: "white"},
+      { value: 'TypeScript', color: '#2D79C7', textColor: "white"},
+      { value: 'NextJS', color: '#111111', textColor: "white" },
+      { value: 'GraphQL', color: '#E00097' , textColor: "white"},
+      { value: 'AWS', color: '#FE9900' , textColor: "white"},
+      { value: 'TailwindCSS', color: '#38BDF8', textColor: "white"}
     ]
   },
   neuro: {
