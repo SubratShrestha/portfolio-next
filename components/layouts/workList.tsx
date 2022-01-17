@@ -3,11 +3,6 @@ import { Flex, Heading, VStack, Text, useColorModeValue } from '@chakra-ui/react
 import works from '../../libs/work'
 import { motion } from 'framer-motion'
 
-interface workElement {
-  title: string
-  link: string
-}
-
 const WorkList: React.FC = () => {
   const childAlign = {
     base: 'flex-start',
@@ -43,8 +38,8 @@ const WorkList: React.FC = () => {
         WORK
       </Heading>
       <VStack spacing={20} align={childAlign} width='100%'>
-        {works.map((value: workElement, i: number) => (
-          <Link href={`/${value.link}`} key={i}>
+        {Object.keys(works).map((key) => (
+          <Link href={`/${works[key].link}`} key={works[key].key}>
             <motion.div
               style={{ cursor: 'pointer', position: 'relative', width: '100%' }}
               initial='rest'
@@ -61,7 +56,7 @@ const WorkList: React.FC = () => {
                 width='100%'
                 textAlign={{ base: 'left', md: 'right' }}
               >
-                {value.title}
+                {works[key].title}
               </Text>
               <motion.div
                 style={{
