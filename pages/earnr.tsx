@@ -6,16 +6,23 @@ import {
   Image,
   useColorModeValue,
   Wrap,
-  WrapItem
+  WrapItem,
+  List,
+  ListItem,
+  Text,
+  ListIcon,
+  VStack,
+  StackDivider
 } from '@chakra-ui/react'
 import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import {EffectCards, Mousewheel} from 'swiper'
+import { EffectCards, Mousewheel } from 'swiper'
 import 'swiper/css/bundle'
 import { NextPage } from 'next'
 import Divider from '../components/layouts/divider'
 import works from '../libs/work'
 import CenteredContainer from '../components/layouts/centeredContainer'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, EffectCards, Mousewheel])
 
@@ -29,12 +36,12 @@ const EarnrPage: NextPage = () => {
   }
 
   return (
-    <Box height='100%' width='100%' pt={20} px={{md: 10, base: 3}}>
-      <Flex flexDirection='row' justifyContent='space-between'> 
-        <Heading as='h1' fontSize="2xl">
+    <Box height='100%' width='100%' pt={20} px={{ md: 10, base: 3 }}>
+      <Flex flexDirection='row' justifyContent='space-between'>
+        <Heading as='h1' fontSize='2xl'>
           {data.title}
         </Heading>
-        <Heading as='h1' fontSize="2xl">
+        <Heading as='h1' fontSize='2xl'>
           Software Engineer Intern
         </Heading>
       </Flex>
@@ -43,34 +50,58 @@ const EarnrPage: NextPage = () => {
         color={useColorModeValue('black', 'gray.300')}
         marginY={3}
       />
+
       <Wrap>
         {data.tags?.map((value, index) => (
           <WrapItem>
-            <Tag
-              // color={value.textColor}
-              key={index}
-              // backgroundColor={value.color}
-            >
-              {value.value}
-            </Tag>
+            <Tag key={index}>{value.value}</Tag>
           </WrapItem>
         ))}
       </Wrap>
-      <Swiper
-        style={{ marginTop: '30px' }}
-        spaceBetween={50}
-        slidesPerView={1}
-        pagination
-        mousewheel
-      >
-        {images.map((source, i) => (
-          <SwiperSlide>
-              <CenteredContainer maxW="100%" height="100%">
-            <Image borderRadius={10} src={source} alt={`earnr image-${i}`} width={{md: "80%", base: "100%"}} />
-            </CenteredContainer>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+
+      <Flex marginTop='30px'>
+        <Swiper
+          style={{ flex: 1.5 }}
+          spaceBetween={50}
+          slidesPerView={1}
+          pagination
+          mousewheel
+        >
+          {images.map((source, i) => (
+            <SwiperSlide>
+              <CenteredContainer
+                justify='flex-start'
+                maxW='100%'
+                height='100%'
+                padding='0'
+              >
+                <Image
+                  borderRadius={10}
+                  src={source}
+                  alt={`earnr image-${i}`}
+                  width='100%'
+                />
+              </CenteredContainer>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <Box flex={1} paddingLeft={5}>
+          <Heading as='h1' fontSize='2xl' marginBottom={3}>
+            What I did
+          </Heading>
+          <List spacing={5}>
+            {data.resp.map((value, i) => (
+              <ListItem>
+                <Flex>
+                  <ListIcon as={ChevronRightIcon} marginTop={1} />
+                  <Text key={i}>{value}</Text>
+                </Flex>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Flex>
     </Box>
   )
 }
