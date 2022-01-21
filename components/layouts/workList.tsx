@@ -33,11 +33,12 @@ const WorkList: React.FC = () => {
       alignItems={childAlign}
       flexDirection='column'
       width={{ base: '100%', md: '30%' }}
+       paddingTop={10}
     >
       <Heading as='h2' size='sm' textColor='#999' marginY='5'>
         WORK
       </Heading>
-      <VStack spacing={20} align={childAlign} width='100%'>
+      <VStack spacing={20} minHeight="300px" align={childAlign} width='100%'>
         {Object.keys(works).map((key) => (
           <Link href={`/${works[key].link}`} key={works[key].key}>
             <motion.div

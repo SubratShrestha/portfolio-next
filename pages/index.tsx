@@ -47,7 +47,7 @@ const Page: NextPage = () => {
         <WorkList />
       </Container>
 
-      <Box align='center' my={4}>
+      <Box my={4}>
         <Link href='/resume.pdf'>
           <a target='_blank'>
             <Button rightIcon={<ChevronRightIcon />} colorScheme='teal'>

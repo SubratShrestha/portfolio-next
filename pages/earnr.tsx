@@ -34,7 +34,7 @@ const EarnrPage: NextPage = () => {
   }
 
   return (
-    <Box height='100%' width='100%' pt={20} px={{ md: 10, base: 3 }}>
+    <Box height='100%' width='100%' pt={{md: 20, base: 10}} px={{ md: 10, base: 3 }}>
 
       <Flex flexDirection='row' justifyContent='space-between'>
         <Heading as='h1' fontSize={{md: "2xl", base: "xl"}}>

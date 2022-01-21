@@ -9,11 +9,21 @@ interface CenteredContainerProps {
   align?: string
   justify?: string
   minHeight?: string
+  direction?: string
+  paddingTop?: string
 }
 
-const CenteredContainer = ({ children, align="center", justify="center", ...props }: CenteredContainerProps) => {
+const CenteredContainer = ({
+  children,
+  direction = 'column',
+  align = 'center',
+  justify = 'center',
+  paddingTop = '0px',
+  ...props
+}: CenteredContainerProps) => {
   return (
     <Container
+      paddingTop={paddingTop}
       display='flex'
       flexDirection='column'
       justifyContent={justify}

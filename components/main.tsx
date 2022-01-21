@@ -29,7 +29,7 @@ const Main = ({ children, router }: Props) => {
       </Head>
 
       <Navbar path={router.asPath} />
-      <CenteredContainer maxW='container.lg' minHeight='auto'>
+      <CenteredContainer maxW='container.lg' minHeight='100vh' paddingTop="55px">
         {children}
       </CenteredContainer>
     </Box>
