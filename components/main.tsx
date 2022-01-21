@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Navbar from './layouts/navbar'
 import CenteredContainer from './layouts/centeredContainer'
-import { Box, Flex, Container, useColorModeValue } from '@chakra-ui/react'
+import { Box, useColorModeValue } from '@chakra-ui/react'
 import { Router } from 'next/router'
 
 interface Props {
@@ -29,7 +29,11 @@ const Main = ({ children, router }: Props) => {
       </Head>
 
       <Navbar path={router.asPath} />
-      <CenteredContainer maxW='container.lg' minHeight='100vh' paddingTop="55px">
+      <CenteredContainer
+        maxW='container.lg'
+        minHeight='100vh'
+        paddingTop='55px'
+      >
         {children}
       </CenteredContainer>
     </Box>

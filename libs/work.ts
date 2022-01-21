@@ -6,7 +6,7 @@ interface workType {
   end?: string
   intro?: string
   resp: Array<string>
-  tags?: Array<{ value: string; color: string, textColor: string }>,
+  tags?: Array<{ value: string; color: string; textColor: string }>
   numImages?: number
 }
 const works: { [id: string]: workType } = {
@@ -25,12 +25,12 @@ const works: { [id: string]: workType } = {
       'Converted the React landing page into a Webflow project for easier modification'
     ],
     tags: [
-      { value: 'React', color: '#61DAFB', textColor: "white"},
-      { value: 'TypeScript', color: '#2D79C7', textColor: "white"},
-      { value: 'NextJS', color: '#111111', textColor: "white" },
-      { value: 'GraphQL', color: '#E00097' , textColor: "white"},
-      { value: 'AWS', color: '#FE9900' , textColor: "white"},
-      { value: 'TailwindCSS', color: '#38BDF8', textColor: "white"}
+      { value: 'React', color: '#61DAFB', textColor: 'white' },
+      { value: 'TypeScript', color: '#2D79C7', textColor: 'white' },
+      { value: 'NextJS', color: '#111111', textColor: 'white' },
+      { value: 'GraphQL', color: '#E00097', textColor: 'white' },
+      { value: 'AWS', color: '#FE9900', textColor: 'white' },
+      { value: 'TailwindCSS', color: '#38BDF8', textColor: 'white' }
     ]
   },
   neuro: {

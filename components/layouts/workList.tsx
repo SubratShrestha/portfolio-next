@@ -1,5 +1,11 @@
 import Link from 'next/link'
-import { Flex, Heading, VStack, Text, useColorModeValue } from '@chakra-ui/react'
+import {
+  Flex,
+  Heading,
+  VStack,
+  Text,
+  useColorModeValue
+} from '@chakra-ui/react'
 import works from '../../libs/work'
 import { motion } from 'framer-motion'
 
@@ -33,13 +39,13 @@ const WorkList: React.FC = () => {
       alignItems={childAlign}
       flexDirection='column'
       width={{ base: '100%', md: '30%' }}
-       paddingTop={10}
+      paddingTop={{ md: 0, base: 10 }}
     >
       <Heading as='h2' size='sm' textColor='#999' marginY='5'>
         WORK
       </Heading>
-      <VStack spacing={20} minHeight="250px" align={childAlign} width='100%'>
-        {Object.keys(works).map((key) => (
+      <VStack spacing={20} minHeight='250px' align={childAlign} width='100%'>
+        {Object.keys(works).map(key => (
           <Link href={`/${works[key].link}`} key={works[key].key}>
             <motion.div
               style={{ cursor: 'pointer', position: 'relative', width: '100%' }}

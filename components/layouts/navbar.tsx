@@ -50,7 +50,7 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
       position='fixed'
       as='nav'
       w='100%'
-      backgroundColor={useColorModeValue("#DEE6E5", "#202024")}
+      backgroundColor={useColorModeValue('#DEE6E5', '#202024')}
       zIndex={1}
       {...props}
     >
@@ -89,7 +89,10 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
-                outline={`1px solid ${useColorModeValue('#202024', 'gray.200')}`}
+                outline={`1px solid ${useColorModeValue(
+                  '#202024',
+                  'gray.200'
+                )}`}
                 variant='outline'
                 aria-label='Options'
               />

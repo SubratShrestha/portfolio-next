@@ -10,7 +10,7 @@ import {
   List,
   ListItem,
   Text,
-  ListIcon,
+  ListIcon
 } from '@chakra-ui/react'
 import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -34,13 +34,17 @@ const EarnrPage: NextPage = () => {
   }
 
   return (
-    <Box height='100%' width='100%' pt={{md: 20, base: 10}} px={{ md: 10, base: 3 }}>
-
+    <Box
+      height='100%'
+      width='100%'
+      pt={{ md: 20, base: 10 }}
+      px={{ md: 10, base: 3 }}
+    >
       <Flex flexDirection='row' justifyContent='space-between'>
-        <Heading as='h1' fontSize={{md: "2xl", base: "xl"}}>
+        <Heading as='h1' fontSize={{ md: '2xl', base: 'xl' }}>
           {data.title}
         </Heading>
-        <Heading as='h1' fontSize={{md: "2xl", base: "xl"}}>
+        <Heading as='h1' fontSize={{ md: '2xl', base: 'xl' }}>
           Software Engineer Intern
         </Heading>
       </Flex>
@@ -59,9 +63,9 @@ const EarnrPage: NextPage = () => {
         ))}
       </Wrap>
 
-      <Flex marginTop='30px' flexDirection={{base: "column", md: "row"}}>
+      <Flex marginTop='30px' flexDirection={{ base: 'column', md: 'row' }}>
         <Swiper
-          style={{flex: 1.5, maxWidth: "100%", marginBottom: "30px"}}
+          style={{ flex: 1.5, maxWidth: '100%', marginBottom: '30px' }}
           spaceBetween={50}
           slidesPerView={1}
           pagination
@@ -86,8 +90,12 @@ const EarnrPage: NextPage = () => {
           ))}
         </Swiper>
 
-        <Box flex={1} paddingLeft={{md: 5, base: 0}} paddingBottom={10}>
-          <Heading as='h1' fontSize={{md: "2xl", base: "xl"}} marginBottom={3}>
+        <Box flex={1} paddingLeft={{ md: 5, base: 0 }} paddingBottom={10}>
+          <Heading
+            as='h1'
+            fontSize={{ md: '2xl', base: 'xl' }}
+            marginBottom={3}
+          >
             What I did
           </Heading>
           <List spacing={5}>
