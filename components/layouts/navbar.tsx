@@ -12,7 +12,6 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorMode,
   useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
@@ -90,6 +89,7 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
+                outline={`1px solid ${useColorModeValue('#202024', 'gray.200')}`}
                 variant='outline'
                 aria-label='Options'
               />
