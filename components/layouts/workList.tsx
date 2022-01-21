@@ -38,7 +38,7 @@ const WorkList: React.FC = () => {
       <Heading as='h2' size='sm' textColor='#999' marginY='5'>
         WORK
       </Heading>
-      <VStack spacing={20} minHeight="300px" align={childAlign} width='100%'>
+      <VStack spacing={20} minHeight="250px" align={childAlign} width='100%'>
         {Object.keys(works).map((key) => (
           <Link href={`/${works[key].link}`} key={works[key].key}>
             <motion.div
