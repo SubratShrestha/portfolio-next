@@ -4,10 +4,11 @@ import { ReactNode } from 'react'
 interface CenteredContainerProps {
   children: ReactNode
   maxW: string
-  height: string
+  height?: string
   padding?: string
   align?: string
   justify?: string
+  minHeight?: string
 }
 
 const CenteredContainer = ({ children, align="center", justify="center", ...props }: CenteredContainerProps) => {

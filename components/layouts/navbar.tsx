@@ -51,7 +51,7 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
       position='fixed'
       as='nav'
       w='100%'
-      bg={useColorModeValue('#ffffff40', '#20202380')}
+      backgroundColor={useColorModeValue("#DEE6E5", "#202024")}
       zIndex={1}
       {...props}
     >
