@@ -23,8 +23,6 @@ import Divider from '../components/layouts/divider'
 import works from '../libs/work'
 import CenteredContainer from '../components/layouts/centeredContainer'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import {useMediaQuery } from 'react-responsive'
-import { useEffect } from 'react'
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, EffectCards, Mousewheel])
 
