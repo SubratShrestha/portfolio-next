@@ -11,8 +11,6 @@ import {
   ListItem,
   Text,
   ListIcon,
-  VStack,
-  StackDivider,
 } from '@chakra-ui/react'
 import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'

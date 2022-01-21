@@ -5,7 +5,7 @@ interface CenteredContainerProps {
   children: ReactNode
   maxW: string
   height: string
-  padding: string
+  padding?: string
   align?: string
   justify?: string
 }
