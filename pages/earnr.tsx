@@ -12,7 +12,7 @@ import {
   Text,
   ListIcon,
   VStack,
-  StackDivider
+  StackDivider,
 } from '@chakra-ui/react'
 import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -23,6 +23,8 @@ import Divider from '../components/layouts/divider'
 import works from '../libs/work'
 import CenteredContainer from '../components/layouts/centeredContainer'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import {useMediaQuery } from 'react-responsive'
+import { useEffect } from 'react'
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, EffectCards, Mousewheel])
 
@@ -37,14 +39,16 @@ const EarnrPage: NextPage = () => {
 
   return (
     <Box height='100%' width='100%' pt={20} px={{ md: 10, base: 3 }}>
+
       <Flex flexDirection='row' justifyContent='space-between'>
-        <Heading as='h1' fontSize='2xl'>
+        <Heading as='h1' fontSize={{md: "2xl", base: "xl"}}>
           {data.title}
         </Heading>
-        <Heading as='h1' fontSize='2xl'>
+        <Heading as='h1' fontSize={{md: "2xl", base: "xl"}}>
           Software Engineer Intern
         </Heading>
       </Flex>
+
       <Divider
         height='1px'
         color={useColorModeValue('black', 'gray.300')}
@@ -59,9 +63,9 @@ const EarnrPage: NextPage = () => {
         ))}
       </Wrap>
 
-      <Flex marginTop='30px'>
+      <Flex marginTop='30px' flexDirection={{base: "column", md: "row"}}>
         <Swiper
-          style={{ flex: 1.5 }}
+          style={{flex: 1.5, maxWidth: "100%", marginBottom: "30px"}}
           spaceBetween={50}
           slidesPerView={1}
           pagination
@@ -86,8 +90,8 @@ const EarnrPage: NextPage = () => {
           ))}
         </Swiper>
 
-        <Box flex={1} paddingLeft={5}>
-          <Heading as='h1' fontSize='2xl' marginBottom={3}>
+        <Box flex={1} paddingLeft={{md: 5, base: 0}} paddingBottom={10}>
+          <Heading as='h1' fontSize={{md: "2xl", base: "xl"}} marginBottom={3}>
             What I did
           </Heading>
           <List spacing={5}>

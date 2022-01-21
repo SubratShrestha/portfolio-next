@@ -18,7 +18,7 @@ const works: { [id: string]: workType } = {
     end: 'August 2021',
     numImages: 3,
     resp: [
-      'Reconstructed signup/onboarding application for new investors using Formik to allow for easier addition and modification of onboarding questions',
+      'Reconstructed signup/onboarding application for new investors using <b>Formik</b> to allow for easier addition and modification of onboarding questions',
       'Developed Bonus code functionality to the platform using AWS Appsync and new GraphQL queries',
       'Added investment management functionality to the dashboard application',
       'Developed automated end-to-end tests for the entire frontend',
