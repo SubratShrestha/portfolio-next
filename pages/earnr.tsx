@@ -23,6 +23,8 @@ import CenteredContainer from '../components/layouts/centeredContainer'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import WorkHeader from '../components/layouts/workHeader'
 import WorkContainer from '../components/layouts/workContainer'
+import WrapTags from '../components/layouts/wrapTags'
+import ChevronList from '../components/layouts/chevronList'
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, EffectCards, Mousewheel])
 
@@ -41,13 +43,7 @@ const EarnrPage: NextPage = () => {
 
       <Divider />
 
-      <Wrap>
-        {data.tags?.map((value, index) => (
-          <WrapItem>
-            <Tag key={index}>{value}</Tag>
-          </WrapItem>
-        ))}
-      </Wrap>
+      <WrapTags name='earnr' />
 
       <Flex marginTop='30px' flexDirection={{ base: 'column', md: 'row' }}>
         <Swiper
@@ -85,52 +81,27 @@ const EarnrPage: NextPage = () => {
             What I did
           </Heading>
           <List spacing={4}>
-            <ListItem>
-              <Flex>
-                <ListIcon as={ChevronRightIcon} marginTop={1} />
-                <Text>
-                  Reconstructed signup/onboarding application for new investors
-                  using <b>Formik</b> to allow for easier addition and
-                  modification of onboarding questions.
-                </Text>
-              </Flex>
-            </ListItem>
-            <ListItem>
-              <Flex>
-                <ListIcon as={ChevronRightIcon} marginTop={1} />
-                <Text>
-                  Developed Bonus code functionality to the platform using{' '}
-                  <b>AWS Appsync</b> and new <b>GraphQL</b> queries.
-                </Text>
-              </Flex>
-            </ListItem>
-            <ListItem>
-              <Flex>
-                <ListIcon as={ChevronRightIcon} marginTop={1} />
-                <Text>
-                  Added investment management functionality to the dashboard
-                  application using <b>React</b> with <b>TypeScript</b>.
-                </Text>
-              </Flex>
-            </ListItem>
-            <ListItem>
-              <Flex>
-                <ListIcon as={ChevronRightIcon} marginTop={1} />
-                <Text>
-                  Developed automated end-to-end tests for the entire frontend
-                  using <b>Cypress</b>.
-                </Text>
-              </Flex>
-            </ListItem>
-            <ListItem>
-              <Flex>
-                <ListIcon as={ChevronRightIcon} marginTop={1} />
-                <Text>
-                  Converted the React landing page into a <b>Webflow</b> project
-                  for easier modification.
-                </Text>
-              </Flex>
-            </ListItem>
+            <ChevronList>
+              Reconstructed signup/onboarding application for new investors
+              using <b>Formik</b> to allow for easier addition and modification
+              of onboarding questions.
+            </ChevronList>
+            <ChevronList>
+              Developed Bonus code functionality to the platform using{' '}
+              <b>AWS Appsync</b> and new <b>GraphQL</b> queries.
+            </ChevronList>
+            <ChevronList>
+              Added investment management functionality to the dashboard
+              application using <b>React</b> with <b>TypeScript</b>.
+            </ChevronList>
+            <ChevronList>
+              Developed automated end-to-end tests for the entire frontend using{' '}
+              <b>Cypress</b>.
+            </ChevronList>
+            <ChevronList>
+              Converted the React landing page into a <b>Webflow</b> project for
+              easier modification.
+            </ChevronList>
             ))
           </List>
         </Box>
