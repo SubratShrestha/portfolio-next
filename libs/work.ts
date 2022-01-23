@@ -5,7 +5,6 @@ interface workType {
   start?: string
   end?: string
   intro?: string
-  resp: Array<string>
   tags?: Array<{ value: string; color: string; textColor: string }>
   numImages?: number
   position?: string
@@ -19,13 +18,6 @@ const works: { [id: string]: workType } = {
     end: 'August 2021',
     numImages: 3,
     position: "Software Engineer Intern",
-    resp: [
-      'Reconstructed signup/onboarding application for new investors using Formik to allow for easier addition and modification of onboarding questions',
-      'Developed Bonus code functionality to the platform using AWS Appsync and new GraphQL queries',
-      'Added investment management functionality to the dashboard application',
-      'Developed automated end-to-end tests for the entire frontend',
-      'Converted the React landing page into a Webflow project for easier modification'
-    ],
     tags: [
       { value: 'React', color: '#61DAFB', textColor: 'white' },
       { value: 'TypeScript', color: '#2D79C7', textColor: 'white' },
@@ -42,15 +34,11 @@ const works: { [id: string]: workType } = {
     start: 'February 2021',
     end: 'December 2021',
     intro: '',
-    resp: [
-      'Designed and Developed the firmware and software for a wireless neural stimulator'
-    ]
   },
   csesoc: {
     key: 2,
     title: 'CSESoc',
     link: 'csesoc',
-    resp: ['content']
   }
 }
 
