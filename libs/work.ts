@@ -5,7 +5,7 @@ interface workType {
   start?: string
   end?: string
   intro?: string
-  tags?: Array<{ value: string; color: string; textColor: string }>
+  tags?: Array<string>
   numImages?: number
   position?: string
 }
@@ -17,15 +17,8 @@ const works: { [id: string]: workType } = {
     start: 'February 2021',
     end: 'August 2021',
     numImages: 3,
-    position: "Software Engineer Intern",
-    tags: [
-      { value: 'React', color: '#61DAFB', textColor: 'white' },
-      { value: 'TypeScript', color: '#2D79C7', textColor: 'white' },
-      { value: 'NextJS', color: '#111111', textColor: 'white' },
-      { value: 'GraphQL', color: '#E00097', textColor: 'white' },
-      { value: 'AWS', color: '#FE9900', textColor: 'white' },
-      { value: 'TailwindCSS', color: '#38BDF8', textColor: 'white' }
-    ]
+    position: 'Software Engineer Intern',
+    tags: ['React', 'TypeScript', 'NextJS', 'GraphQL', 'AWS', 'TailwindCSS']
   },
   neuro: {
     key: 1,
@@ -33,12 +26,13 @@ const works: { [id: string]: workType } = {
     link: 'neural',
     start: 'February 2021',
     end: 'December 2021',
-    intro: '',
+    tags: ['C/C++', 'Python', 'Kivy', 'FreeRTOS', 'BLE', 'DAC', 'ADC'],
+    intro: ''
   },
   csesoc: {
     key: 2,
     title: 'CSESoc',
-    link: 'csesoc',
+    link: 'csesoc'
   }
 }
 

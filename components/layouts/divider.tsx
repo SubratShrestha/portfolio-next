@@ -1,20 +1,14 @@
-import { Box } from '@chakra-ui/react'
+import { Box, useColorModeValue } from '@chakra-ui/react'
 
-interface dividerProps {
-  width?: string
-  height: string
-  color: string
-  marginY: number
-}
-const Divider: React.FC<dividerProps> = ({
-  width = '100%',
-  height,
-  color,
-  marginY
-}) => {
+const Divider = () => {
   return (
-    <Box width={width} height={height} backgroundColor={color} my={marginY} />
+    <Box
+      width='100%'
+      height='1px'
+      backgroundColor={useColorModeValue('black', 'gray.300')}
+      my={3}
+    />
   )
 }
 
-export default Divider;
+export default Divider

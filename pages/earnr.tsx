@@ -39,16 +39,12 @@ const EarnrPage: NextPage = () => {
     <WorkContainer>
       <WorkHeader title={data.title} position={data.position || ''} />
 
-      <Divider
-        height='1px'
-        color={useColorModeValue('black', 'gray.300')}
-        marginY={3}
-      />
+      <Divider />
 
       <Wrap>
         {data.tags?.map((value, index) => (
           <WrapItem>
-            <Tag key={index}>{value.value}</Tag>
+            <Tag key={index}>{value}</Tag>
           </WrapItem>
         ))}
       </Wrap>
