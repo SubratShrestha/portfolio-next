@@ -8,6 +8,7 @@ interface workType {
   resp: Array<string>
   tags?: Array<{ value: string; color: string; textColor: string }>
   numImages?: number
+  position?: string
 }
 const works: { [id: string]: workType } = {
   earnr: {
@@ -17,6 +18,7 @@ const works: { [id: string]: workType } = {
     start: 'February 2021',
     end: 'August 2021',
     numImages: 3,
+    position: "Software Engineer Intern",
     resp: [
       'Reconstructed signup/onboarding application for new investors using Formik to allow for easier addition and modification of onboarding questions',
       'Developed Bonus code functionality to the platform using AWS Appsync and new GraphQL queries',

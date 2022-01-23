@@ -21,6 +21,8 @@ import Divider from '../components/layouts/divider'
 import works from '../libs/work'
 import CenteredContainer from '../components/layouts/centeredContainer'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import WorkHeader from '../components/layouts/workHeader'
+import WorkContainer from '../components/layouts/workContainer'
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, EffectCards, Mousewheel])
 
@@ -34,20 +36,8 @@ const EarnrPage: NextPage = () => {
   }
 
   return (
-    <Box
-      height='100%'
-      width='100%'
-      pt={{ md: 20, base: 10 }}
-      px={{ md: 10, base: 3 }}
-    >
-      <Flex flexDirection='row' justifyContent='space-between'>
-        <Heading as='h1' fontSize={{ md: '2xl', base: 'xl' }}>
-          {data.title}
-        </Heading>
-        <Heading as='h1' fontSize={{ md: '2xl', base: 'xl' }}>
-          Software Engineer Intern
-        </Heading>
-      </Flex>
+    <WorkContainer>
+      <WorkHeader title={data.title} position={data.position || ''} />
 
       <Divider
         height='1px'
@@ -98,19 +88,58 @@ const EarnrPage: NextPage = () => {
           >
             What I did
           </Heading>
-          <List spacing={5}>
-            {data.resp.map((value, i) => (
-              <ListItem>
-                <Flex>
-                  <ListIcon as={ChevronRightIcon} marginTop={1} />
-                  <Text key={i}>{value}</Text>
-                </Flex>
-              </ListItem>
-            ))}
+          <List spacing={4}>
+            <ListItem>
+              <Flex>
+                <ListIcon as={ChevronRightIcon} marginTop={1} />
+                <Text>
+                  Reconstructed signup/onboarding application for new investors
+                  using <b>Formik</b> to allow for easier addition and
+                  modification of onboarding questions.
+                </Text>
+              </Flex>
+            </ListItem>
+            <ListItem>
+              <Flex>
+                <ListIcon as={ChevronRightIcon} marginTop={1} />
+                <Text>
+                  Developed Bonus code functionality to the platform using{' '}
+                  <b>AWS Appsync</b> and new <b>GraphQL</b> queries.
+                </Text>
+              </Flex>
+            </ListItem>
+            <ListItem>
+              <Flex>
+                <ListIcon as={ChevronRightIcon} marginTop={1} />
+                <Text>
+                  Added investment management functionality to the dashboard
+                  application using <b>React</b> with <b>TypeScript</b>.
+                </Text>
+              </Flex>
+            </ListItem>
+            <ListItem>
+              <Flex>
+                <ListIcon as={ChevronRightIcon} marginTop={1} />
+                <Text>
+                  Developed automated end-to-end tests for the entire frontend
+                  using <b>Cypress</b>.
+                </Text>
+              </Flex>
+            </ListItem>
+            <ListItem>
+              <Flex>
+                <ListIcon as={ChevronRightIcon} marginTop={1} />
+                <Text>
+                  Converted the React landing page into a <b>Webflow</b> project
+                  for easier modification.
+                </Text>
+              </Flex>
+            </ListItem>
+            ))
           </List>
         </Box>
       </Flex>
-    </Box>
+    </WorkContainer>
   )
 }
 
