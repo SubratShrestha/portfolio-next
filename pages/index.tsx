@@ -4,7 +4,6 @@ import {
   Box,
   Heading,
   Text,
-  // useColorModeValue,
   Button
 } from '@chakra-ui/react'
 import Link from 'next/link'
@@ -30,8 +29,8 @@ const Page: NextPage = () => {
         justifyContent={{ base: 'space-between' }}
         marginTop='5%'
       >
-        <Box display={{ md: 'flex' }}>
-          <Box flexGrow={1}>
+        <Box display={{ md: 'flex' }} flex={2}>
+          <Box>
             <Heading as='h1' variant='page-title' size='4xl'>
               Subrat
               <br />
