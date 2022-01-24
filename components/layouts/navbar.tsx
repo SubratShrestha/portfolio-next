@@ -97,11 +97,17 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
                 aria-label='Options'
               />
               <MenuList>
+                <NextLink href='/' passHref>
+                  <MenuItem as={Link}>Home</MenuItem>
+                </NextLink>
                 <NextLink href='/about' passHref>
                   <MenuItem as={Link}>About</MenuItem>
                 </NextLink>
-                <NextLink href='/work' passHref>
-                  <MenuItem as={Link}>Work</MenuItem>
+                <NextLink href='/earnr' passHref>
+                  <MenuItem as={Link}>Earnr</MenuItem>
+                </NextLink>
+                <NextLink href='/neural' passHref>
+                  <MenuItem as={Link}>Neural Stimulator</MenuItem>
                 </NextLink>
                 <NextLink
                   href='https://github.com/SubratShrestha/portfolio-next'
