@@ -4,7 +4,7 @@ const WorkContainer: React.FC = ({ children }) => {
     <Box
       height='100%'
       width='100%'
-      pt={10}
+      py={10}
     >
       {children}
     </Box>

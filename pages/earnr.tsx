@@ -2,15 +2,8 @@ import {
   Box,
   Flex,
   Heading,
-  Tag,
   Image,
-  useColorModeValue,
-  Wrap,
-  WrapItem,
   List,
-  ListItem,
-  Text,
-  ListIcon
 } from '@chakra-ui/react'
 import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -20,7 +13,6 @@ import { NextPage } from 'next'
 import Divider from '../components/layouts/divider'
 import works from '../libs/work'
 import CenteredContainer from '../components/layouts/centeredContainer'
-import { ChevronRightIcon } from '@chakra-ui/icons'
 import WorkHeader from '../components/layouts/workHeader'
 import WorkContainer from '../components/layouts/workContainer'
 import WrapTags from '../components/layouts/wrapTags'
@@ -47,7 +39,7 @@ const EarnrPage: NextPage = () => {
 
       <Flex marginTop='30px' flexDirection={{ base: 'column', md: 'row' }}>
         <Swiper
-          style={{ flex: 1.5, maxWidth: '100%', marginBottom: '30px' }}
+          style={{ flex: 1, maxWidth: '100%', marginBottom: '30px' }}
           spaceBetween={50}
           slidesPerView={1}
           pagination
@@ -72,7 +64,7 @@ const EarnrPage: NextPage = () => {
           ))}
         </Swiper>
 
-        <Box flex={1} paddingLeft={{ md: 5, base: 0 }} paddingBottom={10}>
+        <Box flex={1} paddingLeft={{ md: 5, base: 0 }}>
           <Heading
             as='h1'
             fontSize={{ md: '2xl', base: 'xl' }}
