@@ -12,8 +12,8 @@ const NeuralPage: NextPage = () => {
       <WorkHeader title='Neural Stimulator' />
       <Divider />
       <WrapTags name='neuro' />
-      <Flex paddingTop={16}>
-        <Heading as='h1' flex={1}>
+      <Flex paddingTop={16} flexDir={{ md: 'row', base: 'column' }}>
+        <Heading fontSize='4xl' as='h1' flex={1}>
           What I did
         </Heading>
         <Box flex={2}>
@@ -37,11 +37,15 @@ const NeuralPage: NextPage = () => {
           </List>
         </Box>
       </Flex>
-      <Flex paddingTop={16}>
-        <Heading as='h1' flex={1}>
-          Project <br />
-          Summary
-        </Heading>
+      <Flex paddingTop={16} flexDir={{ md: 'row', base: 'column' }}>
+        <Flex flexDir={{ md: 'column', base: 'row' }} flex={1}>
+          <Heading fontSize='4xl' as='h1' maxWidth='fit-content'>
+            Project &nbsp;
+          </Heading>
+          <Heading fontSize='4xl' as='h1'>
+            Summary
+          </Heading>
+        </Flex>
         <Box flex={2}>
           <Text fontSize='lg'>
             As part of UNSW's Vertically Integrated Project program, we aimed to
@@ -52,12 +56,15 @@ const NeuralPage: NextPage = () => {
           </Text>
         </Box>
       </Flex>
-      <Flex paddingTop={16}>
-        <Heading as='h1' flex={1}>
-          The
-          <br />
-          Problem
-        </Heading>
+      <Flex paddingTop={16} flexDir={{ md: 'row', base: 'column' }}>
+        <Flex flexDir={{ md: 'column', base: 'row' }} flex={1}>
+          <Heading fontSize='4xl' as='h1' maxWidth='fit-content'>
+            The &nbsp;
+          </Heading>
+          <Heading fontSize='4xl' as='h1'>
+            Problem
+          </Heading>
+        </Flex>
         <Box flex={2}>
           <Text fontSize='lg'>
             Currently, commercial neural stimulators need to be tethered to the
@@ -68,12 +75,19 @@ const NeuralPage: NextPage = () => {
           </Text>
         </Box>
       </Flex>
-      <Flex paddingTop={16}>
-        <Heading as='h1' flex={1}>
-          Our
-          <br />
-          Solution
-        </Heading>
+      <Flex paddingTop={16} flexDir={{ md: 'row', base: 'column' }}>
+        <Flex flexDir={{ md: 'column', base: 'row' }} flex={1}>
+          <Heading
+            fontSize='4xl'
+            as='h1'
+            maxWidth={{ md: "", base: "fit-content" }}
+          >
+            Our &nbsp;
+          </Heading>
+          <Heading fontSize='4xl' as='h1'>
+            Solution
+          </Heading>
+        </Flex>
         <Box flex={2}>
           <Text fontSize='lg'>
             The solution we came up with involved a neural stimulator that is

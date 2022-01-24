@@ -40,6 +40,7 @@ const WorkList: React.FC = () => {
       flexDirection='column'
       width={{ base: '100%', md: '30%' }}
       paddingTop={{ md: 0, base: 10 }}
+      flex={1}
     >
       <Heading as='h2' size='sm' textColor='#999' marginY='5'>
         WORK
@@ -55,7 +56,7 @@ const WorkList: React.FC = () => {
             >
               <Text
                 as='h2'
-                fontSize='3xl'
+                fontSize={{md: '3xl', base: '2xl'}}
                 fontWeight='bold'
                 position='absolute'
                 top={0}
