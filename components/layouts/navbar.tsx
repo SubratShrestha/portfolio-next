@@ -51,7 +51,7 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
       as='nav'
       w='100%'
       backgroundColor={useColorModeValue('#DEE6E5', '#202024')}
-      zIndex={1}
+      zIndex={9}
       {...props}
     >
       <Container
