@@ -13,7 +13,7 @@ const NeuralPage: NextPage = () => {
       <Divider />
       <WrapTags name='neuro' />
       <Flex paddingTop={16} flexDir={{ md: 'row', base: 'column' }}>
-        <Heading fontSize='4xl' as='h1' flex={1}>
+        <Heading fontSize='3xl' as='h1' flex={1}>
           What I did
         </Heading>
         <Box flex={2}>
@@ -39,10 +39,10 @@ const NeuralPage: NextPage = () => {
       </Flex>
       <Flex paddingTop={16} flexDir={{ md: 'row', base: 'column' }}>
         <Flex flexDir={{ md: 'column', base: 'row' }} flex={1}>
-          <Heading fontSize='4xl' as='h1' maxWidth='fit-content'>
+          <Heading fontSize='3xl' as='h1' maxWidth='fit-content'>
             Project &nbsp;
           </Heading>
-          <Heading fontSize='4xl' as='h1'>
+          <Heading fontSize='3xl' as='h1'>
             Summary
           </Heading>
         </Flex>
@@ -58,10 +58,10 @@ const NeuralPage: NextPage = () => {
       </Flex>
       <Flex paddingTop={16} flexDir={{ md: 'row', base: 'column' }}>
         <Flex flexDir={{ md: 'column', base: 'row' }} flex={1}>
-          <Heading fontSize='4xl' as='h1' maxWidth='fit-content'>
+          <Heading fontSize='3xl' as='h1' maxWidth='fit-content'>
             The &nbsp;
           </Heading>
-          <Heading fontSize='4xl' as='h1'>
+          <Heading fontSize='3xl' as='h1'>
             Problem
           </Heading>
         </Flex>
@@ -78,13 +78,13 @@ const NeuralPage: NextPage = () => {
       <Flex paddingTop={16} flexDir={{ md: 'row', base: 'column' }}>
         <Flex flexDir={{ md: 'column', base: 'row' }} flex={1}>
           <Heading
-            fontSize='4xl'
+            fontSize='3xl'
             as='h1'
             maxWidth={{ md: "", base: "fit-content" }}
           >
             Our &nbsp;
           </Heading>
-          <Heading fontSize='4xl' as='h1'>
+          <Heading fontSize='3xl' as='h1'>
             Solution
           </Heading>
         </Flex>

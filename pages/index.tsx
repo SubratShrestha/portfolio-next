@@ -31,7 +31,7 @@ const Page: NextPage = () => {
       >
         <Box display={{ md: 'flex' }} flex={2}>
           <Box>
-            <Heading as='h1' variant='page-title' size='4xl'>
+            <Heading fontFamily="Lato" as='h1' variant='page-title' size='4xl'>
               Subrat
               <br />
               Shrestha

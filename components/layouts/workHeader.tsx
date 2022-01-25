@@ -7,13 +7,13 @@ interface headerProps {
 
 const WorkHeader = ({ title, position }: headerProps) => {
   return (
-    <Flex flexDirection='row' justifyContent='space-between'>
-      <Heading as='h1' fontSize={{ md: '2xl', base: 'xl' }}>
+    <Flex flexDirection={{md: "row", base: 'column'}} justifyContent='space-between' alignItems='flex-start'>
+      <Heading as='h1' fontSize='3xl'>
         {title}
       </Heading>
 
       {position && (
-        <Heading as='h1' fontSize={{ md: '2xl', base: 'xl' }}>
+        <Heading as='h1' fontSize='2xl' color="gray">
           {position}
         </Heading>
       )}

@@ -67,7 +67,7 @@ const EarnrPage: NextPage = () => {
         <Box flex={1} paddingLeft={{ md: 5, base: 0 }}>
           <Heading
             as='h1'
-            fontSize={{ md: '2xl', base: 'xl' }}
+            fontSize="2xl"
             marginBottom={3}
           >
             What I did
