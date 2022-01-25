@@ -11,7 +11,7 @@ import { EffectCards, Mousewheel } from 'swiper'
 import 'swiper/css/bundle'
 import { NextPage } from 'next'
 import Divider from '../components/layouts/divider'
-import works from '../libs/work'
+import { relevantWork } from '../libs/work'
 import CenteredContainer from '../components/layouts/centeredContainer'
 import WorkHeader from '../components/layouts/workHeader'
 import WorkContainer from '../components/layouts/workContainer'
@@ -21,7 +21,7 @@ import ChevronList from '../components/layouts/chevronList'
 SwiperCore.use([Navigation, Pagination, Scrollbar, EffectCards, Mousewheel])
 
 const EarnrPage: NextPage = () => {
-  const data = works['earnr']
+  const data = relevantWork['earnr']
   let images: Array<string> = []
   if (data.numImages) {
     for (let i = 1; i <= data.numImages; i += 1) {
@@ -31,7 +31,7 @@ const EarnrPage: NextPage = () => {
 
   return (
     <WorkContainer>
-      <WorkHeader title={data.title} position={data.position || ''} />
+      <WorkHeader title={data.title} position={data.position || ''} href="https://www.earnr.com.au/" />
 
       <Divider />
 

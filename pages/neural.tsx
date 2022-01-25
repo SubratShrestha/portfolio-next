@@ -9,7 +9,7 @@ import ChevronList from '../components/layouts/chevronList'
 const NeuralPage: NextPage = () => {
   return (
     <WorkContainer>
-      <WorkHeader title='Neural Stimulator' />
+      <WorkHeader title='Neural Stimulator' href="https://www.challeng.unsw.edu.au/challeng-projects/neural-stimulator" />
       <Divider />
       <WrapTags name='neuro' />
       <Flex paddingTop={16} flexDir={{ md: 'row', base: 'column' }}>

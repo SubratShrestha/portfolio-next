@@ -1,8 +1,8 @@
 import { Wrap, WrapItem, Tag } from '@chakra-ui/react'
-import work from '../../libs/work'
+import { relevantWork } from '../../libs/work'
 
 const WrapTags = ({ name }: { name: string }) => {
-  const data = work[name]
+  const data = relevantWork[name]
 
   return (
     <Wrap>

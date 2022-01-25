@@ -7,4 +7,4 @@ A personal website/portfolio for all my work and projects using React with NextJ
 - [x] swiper module going over nav bar
 - [x] swiper module going over hamburger menu
 - [x] earnr subtitles too small
-- [ ] add links
+- [x] add links

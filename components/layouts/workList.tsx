@@ -6,7 +6,7 @@ import {
   Text,
   useColorModeValue
 } from '@chakra-ui/react'
-import works from '../../libs/work'
+import { relevantWork } from '../../libs/work'
 import { motion } from 'framer-motion'
 
 const WorkList: React.FC = () => {
@@ -43,11 +43,11 @@ const WorkList: React.FC = () => {
       flex={1}
     >
       <Heading as='h2' size='sm' textColor='#999' marginY='5'>
-        WORK
+        RELEVANT WORK
       </Heading>
       <VStack spacing={20} minHeight='250px' align={childAlign} width='100%'>
-        {Object.keys(works).map(key => (
-          <Link href={`/${works[key].link}`} key={works[key].key}>
+        {Object.keys(relevantWork).map(key => (
+          <Link href={relevantWork[key].link ?? ''} key={relevantWork[key].key}>
             <motion.div
               style={{ cursor: 'pointer', position: 'relative', width: '100%' }}
               initial='rest'
@@ -64,7 +64,7 @@ const WorkList: React.FC = () => {
                 width='100%'
                 textAlign={{ base: 'left', md: 'right' }}
               >
-                {works[key].title}
+                {relevantWork[key].title}
               </Text>
               <motion.div
                 style={{
