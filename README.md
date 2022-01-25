@@ -3,7 +3,8 @@ A personal website/portfolio for all my work and projects using React with NextJ
 
 ## Todo:
 - [ ] About page
-- [ ] work title looking strange
-- [ ] swiper module going over nav bar
-- [ ] swiper module going over hamburger menu
-- [ ] earnr subtitles too small
+- [x] work title looking strange
+- [x] swiper module going over nav bar
+- [x] swiper module going over hamburger menu
+- [x] earnr subtitles too small
+- [ ] add links
