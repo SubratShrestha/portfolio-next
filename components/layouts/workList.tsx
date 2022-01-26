@@ -39,7 +39,7 @@ const WorkList: React.FC = () => {
       style={{ display: 'flex', alignItems: 'flex-end', width: '100%' }}
     >
       <Flex
-        alignItems={{md: 'flex-end', base: 'flex-start'}}
+        alignItems={{ md: 'flex-end', base: 'flex-start' }}
         flexDirection='column'
         width={{ base: '100%', md: '20%' }}
         paddingTop={{ md: 0, base: 10 }}
@@ -61,7 +61,7 @@ const WorkList: React.FC = () => {
           <VStack
             spacing={20}
             minHeight='250px'
-            align={{md: 'flex-end', base: 'flex-start'}}
+            align={{ md: 'flex-end', base: 'flex-start' }}
             width='100%'
           >
             {Object.keys(relevantWork).map(key => (
