@@ -50,7 +50,7 @@ const WorkPage: NextPage = () => {
                 >
                   {fullList[key].learn === true && (
                     <Box position='absolute' top={2} right={2}>
-                      <Popover trigger={ isMd ? 'hover' : 'click' }>
+                      <Popover trigger={isMd ? 'hover' : 'click'}>
                         <PopoverTrigger>
                           <Badge px={1} colorScheme='purple' cursor='default'>
                             learn

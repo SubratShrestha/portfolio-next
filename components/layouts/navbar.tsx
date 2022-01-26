@@ -105,9 +105,6 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
                 <NextLink href='/' passHref>
                   <MenuItem as={Link}>Home</MenuItem>
                 </NextLink>
-                <NextLink href='/about' passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
                 <NextLink href='/work' passHref>
                   <MenuItem as={Link}>Work</MenuItem>
                 </NextLink>
