@@ -78,8 +78,8 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
           <LinkItem href='/work' path={path}>
             Work
           </LinkItem>
-          <LinkItem href='/posts' path={path}>
-            Posts
+          <LinkItem href='/about' path={path}>
+            About
           </LinkItem>
         </Stack>
         <Box flex={1} align='right'>
