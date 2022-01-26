@@ -3,6 +3,7 @@ import Navbar from './layouts/navbar'
 import CenteredContainer from './layouts/centeredContainer'
 import { Box, useColorModeValue } from '@chakra-ui/react'
 import { Router } from 'next/router'
+import { motion } from 'framer-motion'
 
 interface Props {
   children: React.ReactNode
