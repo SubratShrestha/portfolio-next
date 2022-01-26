@@ -58,7 +58,7 @@ const WorkList: React.FC = () => {
             >
               <Text
                 as='h2'
-                fontSize={{md: '3xl', base: '2xl'}}
+                fontSize={{ md: '3xl', base: '2xl' }}
                 fontWeight='bold'
                 position='absolute'
                 top={0}
@@ -80,7 +80,10 @@ const WorkList: React.FC = () => {
             </motion.div>
           </Link>
         ))}
-        <ChakraLink href='/work' textColor={useColorModeValue('#202023', 'gray')}>    
+        <ChakraLink
+          href='/work'
+          textColor={useColorModeValue('#202023', 'gray')}
+        >
           View all work
           {<ExternalLinkIcon ml={2} />}
         </ChakraLink>

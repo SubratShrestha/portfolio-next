@@ -1,11 +1,5 @@
 import type { NextPage } from 'next'
-import {
-  Container,
-  Box,
-  Heading,
-  Text,
-  Button
-} from '@chakra-ui/react'
+import { Container, Box, Heading, Text, Button } from '@chakra-ui/react'
 import Link from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import WorkList from '../components/layouts/workList'
@@ -31,7 +25,7 @@ const Page: NextPage = () => {
       >
         <Box display={{ md: 'flex' }} flex={2}>
           <Box>
-            <Heading fontFamily="Lato" as='h1' variant='page-title' size='4xl'>
+            <Heading fontFamily='Lato' as='h1' variant='page-title' size='4xl'>
               Subrat
               <br />
               Shrestha

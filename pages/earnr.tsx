@@ -1,10 +1,4 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Image,
-  List,
-} from '@chakra-ui/react'
+import { Box, Flex, Heading, Image, List } from '@chakra-ui/react'
 import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCards, Mousewheel } from 'swiper'
@@ -31,7 +25,11 @@ const EarnrPage: NextPage = () => {
 
   return (
     <WorkContainer>
-      <WorkHeader title={data.title} position={data.position || ''} href="https://www.earnr.com.au/" />
+      <WorkHeader
+        title={data.title}
+        position={data.position || ''}
+        href='https://www.earnr.com.au/'
+      />
 
       <Divider />
 
@@ -65,11 +63,7 @@ const EarnrPage: NextPage = () => {
         </Swiper>
 
         <Box flex={1} paddingLeft={{ md: 5, base: 0 }}>
-          <Heading
-            as='h1'
-            fontSize="2xl"
-            marginBottom={3}
-          >
+          <Heading as='h1' fontSize='2xl' marginBottom={3}>
             What I did
           </Heading>
           <List spacing={4}>

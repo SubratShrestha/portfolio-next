@@ -26,7 +26,7 @@ const relevantWork: { [id: string]: workItemType } = {
     title: 'Neural Stimulator',
     desc: '',
     link: '/neural',
-    tags: ['C/C++', 'Python', 'Kivy', 'FreeRTOS', 'BLE', 'DAC', 'ADC'],
+    tags: ['C/C++', 'Python', 'Kivy', 'FreeRTOS', 'BLE', 'DAC', 'ADC']
   }
 }
 
@@ -91,14 +91,14 @@ const fullList: { [id: string]: workItemType } = {
     title: 'Shell2Perl',
     desc: 'A transpiler that converts UNIX shell code (Debian Almquist Shell) to Perl code using REGEX',
     tags: ['Perl', 'Regex'],
-    note: 'Link not available/public as this is a University assignment',
+    note: 'Link not available/public as this is a University assignment'
   },
   hex2mips: {
     key: 7,
     title: 'Hex2MIPS',
     desc: 'A tool that converts 32 bit instructions in hex to MIPS instructions',
     tags: ['C', 'MIPS'],
-    note: 'Link not available/public as this is a University assignment',
+    note: 'Link not available/public as this is a University assignment'
   },
   flavoury: {
     key: 8,
@@ -113,7 +113,7 @@ const fullList: { [id: string]: workItemType } = {
     title: 'SHRUG',
     desc: 'Implementation of a subset of Git (add, commit, rm, branch, diff, merge, rebase) in POSIX shell',
     tags: ['Shell', 'Git'],
-    note: 'Link not available/public as this is a University assignment',
+    note: 'Link not available/public as this is a University assignment'
   },
   allowance: {
     key: 10,
