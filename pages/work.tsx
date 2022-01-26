@@ -39,6 +39,8 @@ const WorkPage: NextPage = () => {
             {Object.keys(fullList).map(key => (
               <motion.div
                 variants={fadeInUp}
+                whileHover={{scale: 1.03}}
+                whileTap={{scale: 0.95}}
                 style={isMd ? { width: '70%' } : { width: '90%' }}
               >
                 <Box
