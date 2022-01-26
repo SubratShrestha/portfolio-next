@@ -8,4 +8,6 @@ A personal website/portfolio for all my work and projects using React with NextJ
 - [x] swiper module going over hamburger menu
 - [x] earnr subtitles too small
 - [x] add links
-- [ ] full work list
+- [x] full work list
+- [ ] Animations
+- [ ] Page transitions
