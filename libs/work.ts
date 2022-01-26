@@ -35,7 +35,8 @@ const fullList: { [id: string]: workItemType } = {
     key: 0,
     title: 'Portfolio',
     desc: 'This portfolio website',
-    link: 'https://github.com/SubratShrestha/portfolio-next',
+    source: 'https://github.com/SubratShrestha/portfolio-next',
+    link: '/',
     tags: ['React', 'NextJS', 'TypeScript', 'ChakraUI', 'Framer motion']
   },
   earnr: {
@@ -65,7 +66,7 @@ const fullList: { [id: string]: workItemType } = {
   dsa: {
     key: 3,
     title: 'Data Structures and Algorithms',
-    desc: 'Collection of useful data structure and algorithms for competitive programming',
+    desc: 'Collection of useful data structures and algorithms for competitive programming',
     source: 'https://github.com/SubratShrestha/dsa/',
     tags: ['C++', 'Data structures', 'Algorithms']
   },

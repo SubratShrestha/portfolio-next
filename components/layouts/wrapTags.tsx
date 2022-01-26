@@ -1,8 +1,8 @@
 import { Wrap, WrapItem, Tag } from '@chakra-ui/react'
-import { relevantWork } from '../../libs/work'
+import { fullList, relevantWork } from '../../libs/work'
 
-const WrapTags = ({ name }: { name: string }) => {
-  const data = relevantWork[name]
+const WrapTags = ({ name, full = false }: { name: string, full?: boolean }) => {
+  const data = full ? fullList[name] : relevantWork[name]
 
   return (
     <Wrap>

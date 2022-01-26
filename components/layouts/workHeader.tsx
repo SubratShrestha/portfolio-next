@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Flex, Heading, Link } from '@chakra-ui/react'
+import { Flex, Heading, Link, useColorModeValue } from '@chakra-ui/react'
 
 interface headerProps {
   title: string
@@ -15,7 +15,7 @@ const WorkHeader = ({ title, position, href }: headerProps) => {
       alignItems='flex-start'
     >
       {href ? (
-        <Link href={href} isExternal color='white'>
+        <Link href={href} isExternal textColor={useColorModeValue('#202023', 'white')}>
           <Heading as='h1' fontSize='3xl'>
             {title}
             <ExternalLinkIcon mx={4} fontSize='md' />
@@ -28,7 +28,7 @@ const WorkHeader = ({ title, position, href }: headerProps) => {
       )}
 
       {position && (
-        <Heading as='h1' fontSize='2xl' color='gray'>
+        <Heading as='h1' fontSize='2xl' textColor={useColorModeValue('#202023', 'white')}>
           {position}
         </Heading>
       )}
