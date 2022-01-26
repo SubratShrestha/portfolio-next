@@ -78,9 +78,14 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
           <LinkItem href='/work' path={path}>
             Work
           </LinkItem>
-          <LinkItem href='/about' path={path}>
-            About
-          </LinkItem>
+          <Link
+            textColor={useColorModeValue('#202023', 'white')}
+            style={{ marginLeft: '24px' }}
+            href='https://github.com/SubratShrestha/portfolio-next'
+            isExternal
+          >
+            Source
+          </Link>
         </Stack>
         <Box flex={1} align='right'>
           <ThemeToggleButton />
