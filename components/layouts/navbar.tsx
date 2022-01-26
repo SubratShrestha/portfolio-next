@@ -49,7 +49,7 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
     <Box
       position='fixed'
       as='nav'
-      w='100%'
+      w='100vw'
       backgroundColor={useColorModeValue('#DEE6E5', '#202024')}
       zIndex={9}
       {...props}
