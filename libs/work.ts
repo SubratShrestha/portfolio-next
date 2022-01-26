@@ -103,7 +103,7 @@ const fullList: { [id: string]: workItemType } = {
   flavoury: {
     key: 8,
     title: 'Flavoury',
-    link: 'https://subratshrestha.github.io/Flavoury/',
+    source: 'https://subratshrestha.github.io/Flavoury/',
     desc: 'A Landing page for a concept food delivery service (for learning purposes)',
     tags: ['JavaScript', 'HTML', 'CSS'],
     learn: true
@@ -118,8 +118,7 @@ const fullList: { [id: string]: workItemType } = {
   allowance: {
     key: 10,
     title: 'Allowance',
-    link: 'https://subratshrestha.github.io/Allowance/',
-    source: 'https://github.com/SubratShrestha/Allowance',
+    source: 'https://subratshrestha.github.io/Allowance/',
     desc: 'A budget tracker tool for the web',
     tags: ['JavaScript', 'HTML', 'CSS'],
     learn: true

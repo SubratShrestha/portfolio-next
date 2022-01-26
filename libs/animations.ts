@@ -1,3 +1,5 @@
+const bezierEase = [0.6, -0.05, 0.01, 0.99]
+
 const fadeInUp = {
   initial: {
     y: 60,
@@ -8,7 +10,7 @@ const fadeInUp = {
     opacity: 1,
     transition: {
       duration: 0.6,
-      easing: [0.6, -0.05, 0.01, 0.99]
+      easing: bezierEase
     }
   }
 }
@@ -21,4 +23,26 @@ const stagger = {
   }
 }
 
-export { fadeInUp, stagger }
+const letterAnimation = {
+  initial: {
+    y: 200
+  },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 0.5
+    }
+  }
+}
+
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.2,
+      staggerChildren: 0.1
+    }
+  }
+}
+
+export { fadeInUp, stagger, banner, letterAnimation }

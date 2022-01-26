@@ -1,5 +1,6 @@
 import WorkContainer from '../components/layouts/workContainer'
 import { NextPage } from 'next'
+import NextLink from 'next/link'
 import { fullList } from '../libs/work'
 import {
   Heading,
@@ -39,8 +40,8 @@ const WorkPage: NextPage = () => {
             {Object.keys(fullList).map(key => (
               <motion.div
                 variants={fadeInUp}
-                whileHover={{scale: 1.03}}
-                whileTap={{scale: 0.95}}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.95 }}
                 style={isMd ? { width: '70%' } : { width: '90%' }}
               >
                 <Box
@@ -69,19 +70,23 @@ const WorkPage: NextPage = () => {
                     </Box>
                   )}
                   {fullList[key].link || fullList[key].source ? (
-                    <Link
-                      key={fullList[key].key}
-                      style={{ textDecoration: 'none' }}
-                      textColor={useColorModeValue('#202023', 'white')}
-                      href={fullList[key].link || fullList[key].source || ''}
-                      isExternal={typeof fullList[key].link !== 'string'}
+                    <NextLink
+                      href={fullList[key].link ?? fullList[key].source ?? ''}
                     >
-                      <Heading as='h2' fontSize='2xl' mb={2}>
-                        {fullList[key].title}
-                      </Heading>
-                      <Text mb={3}>{fullList[key].desc}</Text>
-                      <WrapTags name={key} full={true} />
-                    </Link>
+                      <Link
+                        key={fullList[key].key}
+                        style={{ textDecoration: 'none' }}
+                        textColor={useColorModeValue('#202023', 'white')}
+                        href={fullList[key].link || fullList[key].source || ''}
+                        isExternal={typeof fullList[key].link !== 'string'}
+                      >
+                        <Heading as='h2' fontSize='2xl' mb={2}>
+                          {fullList[key].title}
+                        </Heading>
+                        <Text mb={3}>{fullList[key].desc}</Text>
+                        <WrapTags name={key} full={true} />
+                      </Link>
+                    </NextLink>
                   ) : (
                     <>
                       <Heading as='h2' fontSize='2xl' mb={2}>
