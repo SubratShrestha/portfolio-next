@@ -92,7 +92,6 @@ const fullList: { [id: string]: workItemType } = {
     desc: 'A transpiler that converts UNIX shell code (Debian Almquist Shell) to Perl code using REGEX',
     tags: ['Perl', 'Regex'],
     note: 'Link not available/public as this is a University assignment',
-    learn: true
   },
   hex2mips: {
     key: 7,
@@ -100,7 +99,6 @@ const fullList: { [id: string]: workItemType } = {
     desc: 'A tool that converts 32 bit instructions in hex to MIPS instructions',
     tags: ['C', 'MIPS'],
     note: 'Link not available/public as this is a University assignment',
-    learn: true
   },
   flavoury: {
     key: 8,
@@ -116,7 +114,6 @@ const fullList: { [id: string]: workItemType } = {
     desc: 'Implementation of a subset of Git (add, commit, rm, branch, diff, merge, rebase) in POSIX shell',
     tags: ['Shell', 'Git'],
     note: 'Link not available/public as this is a University assignment',
-    learn: true
   },
   allowance: {
     key: 10,

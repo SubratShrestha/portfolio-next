@@ -1,6 +1,5 @@
 import WorkContainer from '../components/layouts/workContainer'
 import { NextPage } from 'next'
-import Divider from '../components/layouts/divider'
 import { fullList } from '../libs/work'
 import {
   Heading,
@@ -8,16 +7,21 @@ import {
   Link,
   Flex,
   Box,
-  useColorModeValue
+  useColorModeValue,
+  Popover,
+  PopoverTrigger,
+  Badge,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverHeader,
+  PopoverBody
 } from '@chakra-ui/react'
 import WrapTags from '../components/layouts/wrapTags'
-import WorkHeader from '../components/layouts/workHeader'
 
 const WorkPage: NextPage = () => {
   return (
     <WorkContainer>
-      <WorkHeader title='Full work list' />
-      <Divider />
       <Flex flexDirection='column' alignItems='center' justifyContent='center'>
         {Object.keys(fullList).map(key => (
           <Link
@@ -33,7 +37,23 @@ const WorkPage: NextPage = () => {
               backgroundColor={useColorModeValue('#DEE6E5', '#292A2F')}
               borderRadius='lg'
               p={6}
+              position='relative'
             >
+              {fullList[key].learn === true && (
+                <Box position='absolute' top={2} right={2}>
+                  <Popover trigger='hover'>
+                    <PopoverTrigger>
+                      <Badge px={1} colorScheme='purple'>learn</Badge>
+                    </PopoverTrigger>
+                    <PopoverContent>
+                      <PopoverArrow />
+                      <PopoverBody fontSize="md">
+                        This is a project indended for learning purposes
+                      </PopoverBody>
+                    </PopoverContent>
+                  </Popover>
+                </Box>
+              )}
               <Heading as='h2' fontSize='2xl' mb={2}>
                 {fullList[key].title}
               </Heading>

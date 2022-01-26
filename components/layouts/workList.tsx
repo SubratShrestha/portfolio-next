@@ -4,10 +4,12 @@ import {
   Heading,
   VStack,
   Text,
+  Link as ChakraLink,
   useColorModeValue
 } from '@chakra-ui/react'
 import { relevantWork } from '../../libs/work'
 import { motion } from 'framer-motion'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 const WorkList: React.FC = () => {
   const childAlign = {
@@ -78,6 +80,10 @@ const WorkList: React.FC = () => {
             </motion.div>
           </Link>
         ))}
+        <ChakraLink href='/work' textColor={useColorModeValue('#202023', 'gray')}>    
+          View all work
+          {<ExternalLinkIcon ml={2} />}
+        </ChakraLink>
       </VStack>
     </Flex>
   )
