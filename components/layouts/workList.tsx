@@ -10,27 +10,13 @@ import {
 import { relevantWork } from '../../libs/work'
 import { motion } from 'framer-motion'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { stagger, fadeInUp } from '../../libs/animations'
+import { stagger, fadeInUp, underlineMotion } from '../../libs/animations'
 
 const WorkList: React.FC = () => {
-  const underlineMotion = {
-    rest: {
-      opacity: 0,
-      width: 0,
-      ease: 'easeOut',
-      duration: 0.2
-    },
-    hover: {
-      width: '60%',
-      opacity: 1,
-      transition: {
-        duration: 0.2,
-        ease: 'easeIn'
-      },
-      backgroundColor: useColorModeValue('#4FBDBA', '#35858B'),
-      cursor: 'pointer'
-    }
-  }
+  underlineMotion.hover.backgroundColor = useColorModeValue(
+    '#4FBDBA',
+    '#35858B'
+  )
 
   return (
     <motion.div

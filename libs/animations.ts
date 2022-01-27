@@ -45,4 +45,23 @@ const banner = {
   }
 }
 
-export { fadeInUp, stagger, banner, letterAnimation }
+const underlineMotion = {
+  rest: {
+    opacity: 0,
+    width: 0,
+    ease: 'easeOut',
+    duration: 0.2
+  },
+  hover: {
+    width: '60%',
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      ease: 'easeIn'
+    },
+    backgroundColor: 'white',
+    cursor: 'pointer'
+  }
+}
+
+export { fadeInUp, stagger, banner, letterAnimation, underlineMotion }
