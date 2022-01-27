@@ -26,7 +26,7 @@ const WorkPage: NextPage = () => {
   const isMd = useMediaQuery({ query: '(min-width: 48em)' })
 
   return (
-    <AnimatedPage>
+    <AnimatedPage> 
       <WorkContainer>
         <motion.div initial='initial' animate='animate'>
           <motion.div
