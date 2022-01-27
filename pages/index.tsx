@@ -68,13 +68,11 @@ const Page: NextPage = () => {
           </Container>
 
           <Box my={4}>
-            <Link href='/resume.pdf'>
-              <a target='_blank'>
-                <Button rightIcon={<ChevronRightIcon />} colorScheme='teal'>
-                  View Resume
-                </Button>
-              </a>
-            </Link>
+            <a href='/resume.pdf' target='_blank'>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme='teal'>
+                View Resume
+              </Button>
+            </a>
           </Box>
         </Container>
       </AnimatedPage>
