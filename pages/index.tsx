@@ -7,27 +7,28 @@ import AnimatedPage from '../components/layouts/animatedPage'
 import { banner, fadeInUp, letterAnimation, stagger } from '../libs/animations'
 import { AnimatePresence, motion } from 'framer-motion'
 
+const AnimatedLetters = ({ words }: { words: Array<string> }) => (
+  <motion.div
+    style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
+    variants={banner}
+    initial='initial'
+    animate='animate'
+  >
+    {words.map(word => (
+      <Flex>
+        {Array.from(word).map(letter => (
+          <motion.div variants={letterAnimation}>
+            <Heading as='h1' fontSize='6xl'>
+              {letter}
+            </Heading>
+          </motion.div>
+        ))}
+      </Flex>
+    ))}
+  </motion.div>
+)
+
 const Page: NextPage = () => {
-  const AnimatedLetters = ({ words }: { words: Array<string> }) => (
-    <motion.div
-      style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
-      variants={banner}
-      initial='initial'
-      animate='animate'
-    >
-      {words.map(word => (
-        <Flex>
-          {Array.from(word).map(letter => (
-            <motion.div variants={letterAnimation}>
-              <Heading as='h1' fontSize='6xl'>
-                {letter}
-              </Heading>
-            </motion.div>
-          ))}
-        </Flex>
-      ))}
-    </motion.div>
-  )
   return (
     <AnimatePresence>
       <AnimatedPage>

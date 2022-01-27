@@ -12,6 +12,7 @@ import { useMediaQuery } from 'react-responsive'
 
 const NeuralPage: NextPage = () => {
   const isMd = useMediaQuery({ query: '(min-width: 48em)' })
+
   return (
     <AnimatedPage>
       <motion.div initial='initial' animate='animate'>
