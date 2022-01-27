@@ -1,8 +1,8 @@
-import { extendTheme } from '@chakra-ui/react';
-import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools';
-import { Dict } from '@chakra-ui/utils';
+import { extendTheme } from '@chakra-ui/react'
+import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools'
+import { Dict } from '@chakra-ui/utils'
 
-type Prop = Dict<any> | StyleFunctionProps;
+type Prop = Dict<any> | StyleFunctionProps
 
 const styles = {
   global: (props: Prop) => ({
@@ -10,7 +10,7 @@ const styles = {
       bg: mode('#f0e7db', '#202023')(props)
     }
   })
-};
+}
 
 const components = {
   Heading: {
@@ -32,21 +32,21 @@ const components = {
       textUnderlineOffset: 3
     })
   }
-};
+}
 
 const fonts = {
   // heading: 'M PLUS Rounded 1c'
-  heading: "Lato",
-};
+  heading: 'Poppins'
+}
 
 const colors = {
   glassTeal: '#88ccca'
-};
+}
 
 const config = {
   initialColorMode: 'dark',
   useSystemColorMode: true
-};
+}
 
 const theme = extendTheme({
   config,
@@ -54,6 +54,6 @@ const theme = extendTheme({
   components,
   colors,
   fonts
-});
+})
 
-export default theme;
+export default theme

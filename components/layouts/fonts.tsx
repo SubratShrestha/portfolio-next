@@ -12,8 +12,7 @@ const FontProvider = () => {
     <Global
       styles={`
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-        * { font-family: "Roboto Mono" }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
       `}
     />
   )

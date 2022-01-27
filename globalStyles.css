@@ -1,0 +1,24 @@
+* {
+  font-family: 'Roboto Mono';
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #88ccca;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.75);
+}
