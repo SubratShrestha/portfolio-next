@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import { Container, Box, Heading, Text, Button, Flex } from '@chakra-ui/react'
-import Link from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import WorkList from '../components/layouts/workList'
 import AnimatedPage from '../components/layouts/animatedPage'
