@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, List } from '@chakra-ui/react'
+import { Box, Heading, Image, List } from '@chakra-ui/react'
 import { useMediaQuery } from 'react-responsive'
 import SwiperCore, { Navigation, Pagination, Mousewheel } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
