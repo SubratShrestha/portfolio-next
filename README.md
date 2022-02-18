@@ -8,5 +8,5 @@ A personal website/portfolio for all my work and projects using React with NextJ
 - [x] earnr subtitles too small
 - [x] add links
 - [x] full work list
-- [ ] Animations
-- [ ] Page transitions
+- [x] Animations
+- [x] Page transitions

@@ -89,9 +89,9 @@ const NeuralPage: NextPage = () => {
                   <Text fontSize='lg'>
                     As part of UNSW's Vertically Integrated Project program, we
                     aimed to build a wireless, affordable, miniature neural
-                    stimulator that researchers can feasibly get and perform
-                    experiments with to better understand the use of neural
-                    stimulation in treating illnesses like Parkinson's, chronic
+                    stimulator that researchers could feasibly get and perform
+                    experiments with to better understand the effects of neural
+                    stimulation on illnesses like Parkinson's, chronic
                     pain, epilepsy and depression.
                   </Text>
                 </motion.div>
@@ -120,7 +120,7 @@ const NeuralPage: NextPage = () => {
                     to the animal and to make the system as small as possible, a
                     custom made ASIC (Application Specific Integrated Circuit)
                     needs to be constructed. This makes the system incredibly
-                    expensive and infeasible for researchers.
+                    expensive and often infeasible.
                   </Text>
                 </motion.div>
               </Box>
@@ -146,13 +146,12 @@ const NeuralPage: NextPage = () => {
                   <Text fontSize='lg'>
                     The solution we came up with involved a neural stimulator
                     that is not as miniturized, but uses a larger board
-                    consisting of off-the-shelf components, making the system
-                    more affordable and accessible. This also makes the system
-                    more versatile by making it possible to replace, add or
-                    remove components as the experiment requires. The firmware
-                    for its basic functionality is also open-sourced, making it
-                    possible to share newer functionality using different
-                    components.
+                    consisting of off-the-shelf components. This makes the system
+                    more affordable, accessible, and more versatile 
+                    because components can be replaced, added or removed according 
+                    to the experiment. The firmware for its basic functionality is 
+                    also open-sourced, making it possible to share additional 
+                    functionality using different components.
                   </Text>
                 </motion.div>
               </Box>
