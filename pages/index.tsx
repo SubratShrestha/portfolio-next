@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { Container, Box, Heading, Text, Button, Flex } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import WorkList from '../components/layouts/workList';
+import WorkList from '../components/workList';
 import AnimatedPage from '../components/layouts/animatedPage';
 import { banner, fadeInUp, letterAnimation, stagger } from '../libs/animations';
 import { AnimatePresence, motion } from 'framer-motion';

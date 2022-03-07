@@ -7,10 +7,10 @@ import {
   Link as ChakraLink,
   useColorModeValue
 } from '@chakra-ui/react';
-import { relevantWork } from '../../libs/work';
+import { relevantWork } from '../libs/work';
 import { motion } from 'framer-motion';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import { stagger, fadeInUp, underlineMotion } from '../../libs/animations';
+import { stagger, fadeInUp, underlineMotion } from '../libs/animations';
 
 const WorkList: React.FC = () => {
   underlineMotion.hover.backgroundColor = useColorModeValue(

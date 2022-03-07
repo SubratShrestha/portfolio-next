@@ -16,7 +16,7 @@ import {
   PopoverBody,
   PopoverCloseButton
 } from '@chakra-ui/react';
-import WrapTags from '../components/layouts/wrapTags';
+import WrapTags from '../components/wrapTags';
 import AnimatedPage from '../components/layouts/animatedPage';
 import { stagger, fadeInUp } from '../libs/animations';
 import { motion } from 'framer-motion';

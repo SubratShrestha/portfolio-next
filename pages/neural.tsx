@@ -1,10 +1,10 @@
 import { NextPage } from 'next';
 import { Flex, Heading, List, Box, Text } from '@chakra-ui/react';
-import Divider from '../components/layouts/divider';
+import Divider from '../components/divider';
 import WorkContainer from '../components/layouts/workContainer';
-import WorkHeader from '../components/layouts/workHeader';
-import WrapTags from '../components/layouts/wrapTags';
-import ChevronList from '../components/layouts/chevronList';
+import WorkHeader from '../components/workHeader';
+import WrapTags from '../components/wrapTags';
+import ChevronList from '../components/chevronList';
 import AnimatedPage from '../components/layouts/animatedPage';
 import { fadeInUp, stagger } from '../libs/animations';
 import { motion } from 'framer-motion';
