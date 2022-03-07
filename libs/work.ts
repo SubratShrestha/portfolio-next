@@ -1,14 +1,14 @@
 interface workItemType {
-  key: number
-  title: string
-  desc: string
-  link?: string
-  source?: string
-  tags: Array<string>
-  learn?: boolean
-  note?: string
-  numImages?: number
-  position?: string
+  key: number;
+  title: string;
+  desc: string;
+  link?: string;
+  source?: string;
+  tags: Array<string>;
+  learn?: boolean;
+  note?: string;
+  numImages?: number;
+  position?: string;
 }
 
 const relevantWork: { [id: string]: workItemType } = {
@@ -28,7 +28,7 @@ const relevantWork: { [id: string]: workItemType } = {
     link: '/neural',
     tags: ['C/C++', 'Python', 'Kivy', 'FreeRTOS', 'BLE', 'DAC', 'ADC']
   }
-}
+};
 
 const fullList: { [id: string]: workItemType } = {
   portfolio: {
@@ -131,5 +131,5 @@ const fullList: { [id: string]: workItemType } = {
     learn: true,
     tags: ['JavaScript', 'HTML', 'CSS']
   }
-}
-export { relevantWork, fullList }
+};
+export { relevantWork, fullList };

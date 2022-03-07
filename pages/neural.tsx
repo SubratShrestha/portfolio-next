@@ -1,5 +1,12 @@
 import { NextPage } from 'next';
-import { Flex, Heading, List, Box, Text } from '@chakra-ui/react';
+import {
+  Flex,
+  Heading,
+  List,
+  Box,
+  Text,
+  useColorModeValue
+} from '@chakra-ui/react';
 import Divider from '../components/divider';
 import WorkContainer from '../components/layouts/workContainer';
 import WorkHeader from '../components/workHeader';
@@ -12,6 +19,10 @@ import { useMediaQuery } from 'react-responsive';
 
 const NeuralPage: NextPage = () => {
   const isMd = useMediaQuery({ query: '(min-width: 48em)' });
+  const textProps = {
+    fontSize: 'md',
+    color: useColorModeValue('black', '#D4D4D4')
+  };
 
   return (
     <AnimatedPage>
@@ -86,7 +97,7 @@ const NeuralPage: NextPage = () => {
               </Flex>
               <Box flex={2}>
                 <motion.div variants={fadeInUp}>
-                  <Text fontSize="lg">
+                  <Text {...textProps}>
                     As part of UNSW's Vertically Integrated Project program, we
                     aimed to build a wireless, affordable, miniature neural
                     stimulator that researchers could feasibly get and perform
@@ -115,7 +126,7 @@ const NeuralPage: NextPage = () => {
               </Flex>
               <Box flex={2}>
                 <motion.div variants={fadeInUp}>
-                  <Text fontSize="lg">
+                  <Text {...textProps}>
                     Currently, commercial neural stimulators need to be tethered
                     to the animal and to make the system as small as possible, a
                     custom made ASIC (Application Specific Integrated Circuit)
@@ -143,7 +154,7 @@ const NeuralPage: NextPage = () => {
               </Flex>
               <Box flex={2}>
                 <motion.div variants={fadeInUp}>
-                  <Text fontSize="lg">
+                  <Text {...textProps}>
                     The solution we came up with involved a neural stimulator
                     that is not as miniturized, but uses a larger board
                     consisting of off-the-shelf components. This makes the

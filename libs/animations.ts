@@ -1,4 +1,4 @@
-const bezierEase = [0.6, -0.05, 0.01, 0.99]
+const bezierEase = [0.6, -0.05, 0.01, 0.99];
 
 const fadeInUp = {
   initial: {
@@ -13,7 +13,7 @@ const fadeInUp = {
       easing: bezierEase
     }
   }
-}
+};
 
 const stagger = {
   animate: {
@@ -21,7 +21,7 @@ const stagger = {
       staggerChildren: 0.1
     }
   }
-}
+};
 
 const letterAnimation = {
   initial: {
@@ -34,7 +34,7 @@ const letterAnimation = {
       duration: 0.5
     }
   }
-}
+};
 
 const banner = {
   animate: {
@@ -43,7 +43,7 @@ const banner = {
       staggerChildren: 0.1
     }
   }
-}
+};
 
 const underlineMotion = {
   rest: {
@@ -62,6 +62,6 @@ const underlineMotion = {
     backgroundColor: 'white',
     cursor: 'pointer'
   }
-}
+};
 
-export { fadeInUp, stagger, banner, letterAnimation, underlineMotion }
+export { fadeInUp, stagger, banner, letterAnimation, underlineMotion };

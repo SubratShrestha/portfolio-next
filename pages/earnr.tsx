@@ -90,33 +90,28 @@ const EarnrPage: NextPage = () => {
                 <List spacing={4}>
                   <motion.div variants={fadeInUp}>
                     <ChevronList>
-                      Reconstructed signup/onboarding application for new
-                      investors using <b>Formik</b> to allow for easier addition
-                      and modification of onboarding questions.
+                      Developed and tested new <b>React</b> components in{' '}
+                      <b>TypeScript</b> for the signup/onboarding application.
                     </ChevronList>
                   </motion.div>
                   <motion.div variants={fadeInUp}>
                     <ChevronList>
-                      Developed Bonus code functionality to the platform using{' '}
-                      <b>AWS Appsync</b> and new <b>GraphQL</b> queries.
+                      Implemented Bonus code functionality by creating and
+                      integrating new <b>GraphQL</b> queries with{' '}
+                      <b>AWS Appsync</b> and <b>DynamoDB</b>.
                     </ChevronList>
                   </motion.div>
                   <motion.div variants={fadeInUp}>
                     <ChevronList>
-                      Added investment management functionality to the dashboard
-                      application using <b>React</b> with <b>TypeScript</b>.
+                      Developed automated end-to-end tests for the frontend
+                      using <b>Cypress</b>.
                     </ChevronList>
                   </motion.div>
                   <motion.div variants={fadeInUp}>
                     <ChevronList>
-                      Developed automated end-to-end tests for the entire
-                      frontend using <b>Cypress</b>.
-                    </ChevronList>
-                  </motion.div>
-                  <motion.div variants={fadeInUp}>
-                    <ChevronList>
-                      Converted the React landing page into a <b>Webflow</b>{' '}
-                      project for easier modification.
+                      Converted the React landing page to a <b>Webflow</b>{' '}
+                      project allowing non-developers to make changes to the
+                      marketing content.
                     </ChevronList>
                   </motion.div>
                   ))
