@@ -1,5 +1,5 @@
-import Logo from './logo'
-import NextLink from 'next/link'
+import Logo from './logo';
+import NextLink from 'next/link';
 import {
   Container,
   Box,
@@ -13,23 +13,23 @@ import {
   MenuButton,
   IconButton,
   useColorModeValue
-} from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
-import ThemeToggleButton from './themeChangeButton'
+} from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
+import ThemeToggleButton from './themeChangeButton';
 
 interface LinkItemProps {
-  href: string
-  path: string
-  children: React.ReactNode
+  href: string;
+  path: string;
+  children: React.ReactNode;
 }
 
 interface NavbarProps {
-  path: string
+  path: string;
 }
 
 const LinkItem = ({ href, path, children }: LinkItemProps) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha')
+  const active = path === href;
+  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha');
 
   return (
     <NextLink href={href}>
@@ -41,29 +41,29 @@ const LinkItem = ({ href, path, children }: LinkItemProps) => {
         {children}
       </Link>
     </NextLink>
-  )
-}
+  );
+};
 
 const Navbar = ({ path, ...props }: NavbarProps) => {
   return (
     <Box
-      position='fixed'
-      as='nav'
-      w='100vw'
+      position="fixed"
+      as="nav"
+      w="100vw"
       backgroundColor={useColorModeValue('#DEE6E5', '#202024')}
       zIndex={9}
       {...props}
     >
       <Container
-        display='flex'
+        display="flex"
         p={2}
-        maxW='container.lg'
-        wrap='wrap'
-        align='center'
-        justify='space-between'
+        maxW="container.lg"
+        wrap="wrap"
+        align="center"
+        justify="space-between"
       >
-        <Flex align='center' mr={5}>
-          <Heading as='h1' size='lg' letterSpacing={'tighter'}>
+        <Flex align="center" mr={5}>
+          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
             <Logo />
           </Heading>
         </Flex>
@@ -71,23 +71,23 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
-          alignItems='center'
+          alignItems="center"
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}
         >
-          <LinkItem href='/work' path={path}>
+          <LinkItem href="/work" path={path}>
             Work
           </LinkItem>
           <Link
             textColor={useColorModeValue('#202023', 'white')}
             style={{ marginLeft: '24px' }}
-            href='https://github.com/SubratShrestha/portfolio-next'
+            href="https://github.com/SubratShrestha/portfolio-next"
             isExternal
           >
             Source
           </Link>
         </Stack>
-        <Box flex={1} align='right'>
+        <Box flex={1} align="right">
           <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
@@ -98,24 +98,24 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
                   '#202024',
                   'gray.200'
                 )}`}
-                variant='outline'
-                aria-label='Options'
+                variant="outline"
+                aria-label="Options"
               />
               <MenuList>
-                <NextLink href='/' passHref>
+                <NextLink href="/" passHref>
                   <MenuItem as={Link}>Home</MenuItem>
                 </NextLink>
-                <NextLink href='/work' passHref>
+                <NextLink href="/work" passHref>
                   <MenuItem as={Link}>Work</MenuItem>
                 </NextLink>
-                <NextLink href='/earnr' passHref>
+                <NextLink href="/earnr" passHref>
                   <MenuItem as={Link}>Earnr</MenuItem>
                 </NextLink>
-                <NextLink href='/neural' passHref>
+                <NextLink href="/neural" passHref>
                   <MenuItem as={Link}>Neural Stimulator</MenuItem>
                 </NextLink>
                 <NextLink
-                  href='https://github.com/SubratShrestha/portfolio-next'
+                  href="https://github.com/SubratShrestha/portfolio-next"
                   passHref
                 >
                   <MenuItem as={Link}>Page source</MenuItem>
@@ -126,7 +126,7 @@ const Navbar = ({ path, ...props }: NavbarProps) => {
         </Box>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

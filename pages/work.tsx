@@ -1,7 +1,7 @@
-import WorkContainer from '../components/layouts/workContainer'
-import { NextPage } from 'next'
-import NextLink from 'next/link'
-import { fullList } from '../libs/work'
+import WorkContainer from '../components/layouts/workContainer';
+import { NextPage } from 'next';
+import NextLink from 'next/link';
+import { fullList } from '../libs/work';
 import {
   Heading,
   Text,
@@ -15,20 +15,20 @@ import {
   PopoverArrow,
   PopoverBody,
   PopoverCloseButton
-} from '@chakra-ui/react'
-import WrapTags from '../components/layouts/wrapTags'
-import AnimatedPage from '../components/layouts/animatedPage'
-import { stagger, fadeInUp } from '../libs/animations'
-import { motion } from 'framer-motion'
-import { useMediaQuery } from 'react-responsive'
+} from '@chakra-ui/react';
+import WrapTags from '../components/layouts/wrapTags';
+import AnimatedPage from '../components/layouts/animatedPage';
+import { stagger, fadeInUp } from '../libs/animations';
+import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 
 const WorkPage: NextPage = () => {
-  const isMd = useMediaQuery({ query: '(min-width: 48em)' })
+  const isMd = useMediaQuery({ query: '(min-width: 48em)' });
 
   return (
-    <AnimatedPage> 
+    <AnimatedPage>
       <WorkContainer>
-        <motion.div initial='initial' animate='animate'>
+        <motion.div initial="initial" animate="animate">
           <motion.div
             variants={stagger}
             style={{
@@ -46,23 +46,23 @@ const WorkPage: NextPage = () => {
               >
                 <Box
                   backgroundColor={useColorModeValue('#DEE6E5', '#292A2F')}
-                  borderRadius='lg'
+                  borderRadius="lg"
                   p={6}
-                  position='relative'
+                  position="relative"
                   marginBottom={8}
                 >
                   {fullList[key].learn === true && (
-                    <Box position='absolute' top={2} right={2}>
+                    <Box position="absolute" top={2} right={2}>
                       <Popover trigger={isMd ? 'hover' : 'click'}>
                         <PopoverTrigger>
-                          <Badge px={1} colorScheme='purple' cursor='default'>
+                          <Badge px={1} colorScheme="purple" cursor="default">
                             learn
                           </Badge>
                         </PopoverTrigger>
                         <PopoverContent>
                           <PopoverArrow />
                           <PopoverCloseButton />
-                          <PopoverBody fontSize='md' marginRight={2}>
+                          <PopoverBody fontSize="md" marginRight={2}>
                             This is a project indended for learning purposes
                           </PopoverBody>
                         </PopoverContent>
@@ -80,7 +80,7 @@ const WorkPage: NextPage = () => {
                         href={fullList[key].link || fullList[key].source || ''}
                         isExternal={typeof fullList[key].link !== 'string'}
                       >
-                        <Heading as='h2' fontSize='2xl' mb={2}>
+                        <Heading as="h2" fontSize="2xl" mb={2}>
                           {fullList[key].title}
                         </Heading>
                         <Text mb={3}>{fullList[key].desc}</Text>
@@ -89,12 +89,12 @@ const WorkPage: NextPage = () => {
                     </NextLink>
                   ) : (
                     <>
-                      <Heading as='h2' fontSize='2xl' mb={2}>
+                      <Heading as="h2" fontSize="2xl" mb={2}>
                         {fullList[key].title}
                       </Heading>
                       <Text mb={3}>{fullList[key].desc}</Text>
                       <WrapTags name={key} full={true} />
-                      <Text fontSize='xs' mt={4}>
+                      <Text fontSize="xs" mt={4}>
                         {fullList[key].note || ''}
                       </Text>
                     </>
@@ -106,7 +106,7 @@ const WorkPage: NextPage = () => {
         </motion.div>
       </WorkContainer>
     </AnimatedPage>
-  )
-}
+  );
+};
 
-export default WorkPage
+export default WorkPage;

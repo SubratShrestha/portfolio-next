@@ -1,16 +1,16 @@
-import { Container } from '@chakra-ui/react'
-import { ReactNode } from 'react'
+import { Container } from '@chakra-ui/react';
+import { ReactNode } from 'react';
 
 interface CenteredContainerProps {
-  children: ReactNode
-  maxW: string
-  height?: string
-  padding?: string
-  align?: string
-  justify?: string
-  minHeight?: string
-  direction?: string
-  paddingTop?: string
+  children: ReactNode;
+  maxW: string;
+  height?: string;
+  padding?: string;
+  align?: string;
+  justify?: string;
+  minHeight?: string;
+  direction?: string;
+  paddingTop?: string;
 }
 
 const CenteredContainer = ({
@@ -24,15 +24,15 @@ const CenteredContainer = ({
   return (
     <Container
       paddingTop={paddingTop}
-      display='flex'
-      flexDirection='column'
+      display="flex"
+      flexDirection="column"
       justifyContent={justify}
       alignItems={align}
       {...props}
     >
       {children}
     </Container>
-  )
-}
+  );
+};
 
-export default CenteredContainer
+export default CenteredContainer;

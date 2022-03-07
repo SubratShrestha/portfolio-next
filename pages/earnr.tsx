@@ -1,42 +1,42 @@
-import { Box, Heading, Image, List } from '@chakra-ui/react'
-import { useMediaQuery } from 'react-responsive'
-import SwiperCore, { Navigation, Pagination, Mousewheel } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css/bundle'
-import { NextPage } from 'next'
-import Divider from '../components/layouts/divider'
-import { relevantWork } from '../libs/work'
-import CenteredContainer from '../components/layouts/centeredContainer'
-import WorkHeader from '../components/layouts/workHeader'
-import WorkContainer from '../components/layouts/workContainer'
-import WrapTags from '../components/layouts/wrapTags'
-import ChevronList from '../components/layouts/chevronList'
-import AnimatedPage from '../components/layouts/animatedPage'
-import { stagger, fadeInUp } from '../libs/animations'
-import { motion } from 'framer-motion'
+import { Box, Heading, Image, List } from '@chakra-ui/react';
+import { useMediaQuery } from 'react-responsive';
+import SwiperCore, { Navigation, Pagination, Mousewheel } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/bundle';
+import { NextPage } from 'next';
+import Divider from '../components/layouts/divider';
+import { relevantWork } from '../libs/work';
+import CenteredContainer from '../components/layouts/centeredContainer';
+import WorkHeader from '../components/layouts/workHeader';
+import WorkContainer from '../components/layouts/workContainer';
+import WrapTags from '../components/layouts/wrapTags';
+import ChevronList from '../components/layouts/chevronList';
+import AnimatedPage from '../components/layouts/animatedPage';
+import { stagger, fadeInUp } from '../libs/animations';
+import { motion } from 'framer-motion';
 
-SwiperCore.use([Navigation, Pagination, Mousewheel])
+SwiperCore.use([Navigation, Pagination, Mousewheel]);
 
 const EarnrPage: NextPage = () => {
-  const isMd = useMediaQuery({ query: '(min-width: 48em)' })
-  const data = relevantWork['earnr']
-  let images: Array<string> = []
+  const isMd = useMediaQuery({ query: '(min-width: 48em)' });
+  const data = relevantWork['earnr'];
+  let images: Array<string> = [];
   if (data.numImages) {
     for (let i = 1; i <= data.numImages; i += 1) {
-      images.push(`/images/earnr/earnr-${i}.jpg`)
+      images.push(`/images/earnr/earnr-${i}.jpg`);
     }
   }
 
   return (
     <AnimatedPage>
-      <motion.div initial='initial' animate='animate'>
+      <motion.div initial="initial" animate="animate">
         <WorkContainer>
           <motion.div variants={stagger}>
             <motion.div variants={fadeInUp}>
               <WorkHeader
                 title={data.title}
                 position={data.position || ''}
-                href='https://www.earnr.com.au/'
+                href="https://www.earnr.com.au/"
               />
             </motion.div>
 
@@ -45,7 +45,7 @@ const EarnrPage: NextPage = () => {
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <WrapTags name='earnr' />
+              <WrapTags name="earnr" />
             </motion.div>
 
             <motion.div
@@ -66,16 +66,16 @@ const EarnrPage: NextPage = () => {
                 {images.map((source, i) => (
                   <SwiperSlide>
                     <CenteredContainer
-                      justify='flex-start'
-                      maxW='100%'
-                      height='100%'
-                      padding='0'
+                      justify="flex-start"
+                      maxW="100%"
+                      height="100%"
+                      padding="0"
                     >
                       <Image
                         borderRadius={10}
                         src={source}
                         alt={`earnr image-${i}`}
-                        width='100%'
+                        width="100%"
                       />
                     </CenteredContainer>
                   </SwiperSlide>
@@ -83,7 +83,7 @@ const EarnrPage: NextPage = () => {
               </Swiper>
               <Box flex={1} paddingLeft={{ md: 5, base: 0 }}>
                 <motion.div variants={fadeInUp}>
-                  <Heading as='h1' fontSize='2xl' marginBottom={3}>
+                  <Heading as="h1" fontSize="2xl" marginBottom={3}>
                     What I did
                   </Heading>
                 </motion.div>
@@ -127,7 +127,7 @@ const EarnrPage: NextPage = () => {
         </WorkContainer>
       </motion.div>
     </AnimatedPage>
-  )
-}
+  );
+};
 
-export default EarnrPage
+export default EarnrPage;
